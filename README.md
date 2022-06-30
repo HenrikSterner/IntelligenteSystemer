@@ -45,24 +45,17 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 7 | | Lineær algebra II: Matricer  |  |
 8 | | ML-Projekt: k-means algoritmen | |
 9 | | Deskriptiv statistik |  |
-
 10 | | Beslutningstræer ||
 11 | | ML-Projekt: Randomiseret skove | |
-
 12 | | Sandsynlighedsregning, Bayes sætning||
 13 | | ML-Projekt: Naiv Bayes algoritme | |
-
 14 | | Lineær regression | |
 15 | | Logistisk regression |  |
 16 | | ML-Projekt: Regression | |
-
-
-
 17 | | Perceptroner |  |
 18 | | Lineært Neurale netværk |  |
 19 | | Multilinære Neurale netværk |  |
 20 | | ML-projekt: Neurale netværk |  |
-
 21 | | Dyb læring |  |
 22 | | Convolutional neurale netværk |  |
 
