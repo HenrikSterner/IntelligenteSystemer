@@ -15,35 +15,42 @@ Som listen indikerer er det væsentligt at forholde sig kritisk til fagets mulig
 For at kunne forstå, implementere og anvende algoritmer indenfor maskinelæring forudsættes en god forståelse for emner både indenfor datalogi og matematik. Herunder
 
 # Grundbog og øvelser
-Vi bruger uddrag af følgende to gratis og opensource bøger af af Jake Vanderplas: 
-1. (PY) [A Whirlwind Tour of Python](https://jakevdp.github.io/WhirlwindTourOfPython/). 
-2. (DI) [Dive into Deep Learning](https://d2l.ai/).
-3. [Øvelser](https://github.com/HenrikSterner/PythonForDataScience/blob/master/exercises/exercises.ipynb)
-4. [Noter] (https://github.com/HenrikSterner/PythonForDataScience/tree/master/noter)
-5. [AdvPy] (https://python-course.eu/advanced-python/)
+Vi bruger uddrag af følgende to gratis og opensource bøger: 
+1. (PY) [A Whirlwind Tour of Python](https://jakevdp.github.io/WhirlwindTourOfPython/) af Jake VanderPlas. 
+2. (PD) [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) af Jake VanderPlas.
+3. (DI) [Dive into Deep Learning](https://d2l.ai/) af Aston Zhang et al.
+4. (ØP) [Øvelser og projekter](https://github.com/HenrikSterner/PythonForDataScience/blob/master/exercises/exercises.ipynb) af Henrik Sterner.
 
 
-Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og internet ressourcer.
+Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet.
 
 # Software
-Kurset benytter følgende software (python er inkl. i Anaconda ligesom numpy, scikit, matplotlib, streamlit etc.) 
-- [Anaconda] (https://www.anaconda.com/products/individual) 
-- [Jupyter-plugin til Visual Studio Code] (https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter). Kan bare hentes under plugin i vscode.
-- [pyp5js] (https://berinhard.github.io/pyp5js/)
+Man kan vælge at køre online uden at skulle installere noget og dokumenter kan nemt deles:
+- [Google Colab](https://colab.research.google.com/)
+
+Alternativt kan man bruge 
+- [Anaconda](https://www.anaconda.com/products/individual) 
+- [Jupyter-plugin til Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter). Kan bare hentes under plugin i vscode.
+
+Begge løsninger giver mulighed for at skrive Python (i jupyter-format) og tilhørende biblioteker numpy, scikit, matplotlib, streamlit etc.
+
+Derudover kommer vi til at bruge Python til Processing, da det ofte er særdeles nemt at visualisere algoritmer i to dimensioner:
+- [Processing in Python](https://py.processing.org/)
 
 
 # Undervisningsplan
+Planen er tentativ og kan ændres. Den indleder med et crash course i Python, lineær algebra og sandsynlighedsregning, som er centrale forudsætninger for at forstå maskinelæring.
 
 Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 ----------- | ----------- | ----------------------------| ----------- |
-1 | | Python I: Sekvens selektion og iteration |         |
-2 | | Python II: Klasser og objekter  | |
-3 | | Lineær algebra I: Vektorer  | |
-4 | | Python IV: Numpy og scipy  |  |
-5 | | ML-Projekt: kNN algoritmen | |
-6 | | Python III: Streamlit og matplotlib |  |
+1 |PY:1-6 | Python I: Variabler, sekvens og selektion |         |
+2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  | |
+3 |PY:16,PD:2 | Python III: Numpy  | |
+4 |PY:16,PD:4 | Python IV: Matplotlib  | |
+5 | | **Aflevering af ML-Projekt: kNN algoritmen** | |
+6 | | Lineær algebra I: Vektorer  |  |
 7 | | Lineær algebra II: Matricer  |  |
-8 | | ML-Projekt: k-means algoritmen | |
+8 | | **ML-Projekt: Aflevering af k-means algoritmen** | |
 9 | | Deskriptiv statistik |  |
 10 | | Beslutningstræer ||
 11 | | ML-Projekt: Randomiseret skove | |
