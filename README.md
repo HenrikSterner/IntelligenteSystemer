@@ -47,7 +47,7 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  | |
 3 |PY:16,PD:2 | Python III: Numpy  | |
 4 |PY:16,PD:4 | Python IV: Matplotlib  | |
-5 | | **Aflevering af ML-Projekt: kNN algoritmen** | |
+5 | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) | **Aflevering af ML-Projekt: kNN algoritmen** | |
 6 | | Lineær algebra I: Vektorer  |  |
 7 | | Lineær algebra II: Matricer  |  |
 8 | | **ML-Projekt: Aflevering af k-means algoritmen** | |
