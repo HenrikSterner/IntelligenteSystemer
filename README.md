@@ -43,11 +43,11 @@ Planen er tentativ og kan ændres. Den indleder med et crash course i Python, li
 
 Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 ----------- | ----------- | ----------------------------| ----------- |
-1 |PY:1-6 | Python I: Variabler, sekvens og selektion |         |
-2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  | |
-3 |PY:16,PD:2 | Python III: Numpy  | |
-4 |PY:16,PD:4 | Python IV: Matplotlib  | |
-5 | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) | **Aflevering af ML-Projekt: kNN algoritmen** | |
+1 |PY:1-6 | Python I: Variabler, sekvens og selektion | ØP:1-6     |
+2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  |ØP:7-14,21-25,33 |
+3 |PY:16,PD:2 | Python III: Numpy  | 43-48|
+4 |PY:16,PD:4 | Python IV: Matplotlib  |43-48 |
+5 | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) | **Aflevering af ML-Projekt: kNN algoritmen** | Arbejde med projekt |
 6 | | Lineær algebra I: Vektorer  |  |
 7 | | Lineær algebra II: Matricer  |  |
 8 | | **ML-Projekt: Aflevering af k-means algoritmen** | |
