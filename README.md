@@ -60,16 +60,14 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 5 |PD:5(kNN)  | KNN-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
 7 |PD:5(kNN) | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
 8 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
-11 | | ML-Projekt:  | |
-12 | | Sandsynlighedsregning, Bayes sætning||
-13 | | Naiv Bayes algoritme | |
-14 | | Lineær regression | |
-15 | | Logistisk regression |  |
-16 | | ML-Projekt: Regression | |
-17 | | Perceptroner |  |
-18 | | Lineært Neurale netværk |  |
-19 | | Multilinære Neurale netværk |  |
-20 | | ML-projekt: Neurale netværk |  |
-21 | | Dyb læring |  |
-22 | | Convolutional neurale netværk |  |
+10 |PD:5(Naive Bayes..)  | Naiv Bayes-algoritmen | |
+11 | | Lineær regression | |
+12 | | Logistisk regression |  |
+13 | | Regression | |
+14 | | Perceptroner |  |
+15 | | Lineært Neurale netværk |  |
+16 | | Multilinære Neurale netværk |  |
+17 | | Neurale netværk |  |
+18 | | Dyb læring |  |
+19 | | Convolutional neurale netværk |  |
 
