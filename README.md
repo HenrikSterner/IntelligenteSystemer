@@ -12,7 +12,12 @@ Herunder nogle bud på systemer, som vi kan udvikle prototyper af. Listen er lan
 Som listen indikerer er det væsentligt at forholde sig kritisk til fagets muligheder og begrænsninger herunder de indlejrede bias. Nettet flyder i øvrigt over med store, frit tilgængelige datasæt, som vi i første omgang kan træne vores modeller på. 
 
 # Forudsætninger
-For at kunne forstå, implementere og anvende algoritmer indenfor maskinelæring forudsættes en god forståelse for emner både indenfor datalogi og matematik. Herunder
+For at kunne forstå, implementere og anvende algoritmer indenfor maskinelæring forudsættes en god forståelse for emner både indenfor datalogi og matematik. Fundamentet for ML består af:
+- Programmering (vi bruger Python primært)
+- Sandsynlighedsteori og statistik 
+- Lineær algebra (operationer på vektorer, matricer og tensorer)
+- Calculus og vektorcalculus (funktioner af flere variable)
+Vi introducerer den nødvendige teori når det er nødvendigt og kun i det omfang det er nødvendigt. For en uddybende teoretisk forståelse af de matematiske begreber kilde eksempelvis i (ML)
 
 # Grundbog og øvelser
 Vi bruger uddrag af følgende to gratis og opensource bøger: 
@@ -20,9 +25,14 @@ Vi bruger uddrag af følgende to gratis og opensource bøger:
 2. (PD) [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) af Jake VanderPlas.
 3. (DI) [Dive into Deep Learning](https://d2l.ai/) af Aston Zhang et al.
 4. (ØP) [Øvelser og projekter](https://github.com/HenrikSterner/PythonForDataScience/blob/master/exercises/exercises.ipynb) af Henrik Sterner.
+   
+Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet. 
 
 
-Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet.
+Supplerende litteratur: 
+5. (ML) [Mathematics for machine learning](https://mml-book.github.io/) af Deisenroth et al.
+6. (ML2) [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html)
+
 
 # Software
 Man kan vælge at køre online uden at skulle installere noget og dokumenter kan nemt deles:
@@ -47,15 +57,12 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  |ØP:7-14,21-25,33 |
 3 |PY:16,PD:2 | Python III: Numpy  |ØP: 43-48|
 4 |PY:16,PD:4 | Python IV: Matplotlib  |ØP: 43-48 |
-5 | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) | **ML-Projekt: kNN algoritmen** | Arbejde med projekt |
-6 | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) | **ML-Projekt: kNN algoritmen** | Arbejde med og aflevere projekt |
-7 | | Lineær algebra: Vektorer og Matricer  |  |
-8 | | **ML-Projekt: Aflevering af k-means algoritmen** | |
-9 | | Deskriptiv statistik |  |
-10 | | Beslutningstræer ||
-11 | | ML-Projekt: Randomiseret skove | |
+5 |PD:5(kNN)  | KNN-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
+7 |PD:5(kNN) | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
+8 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
+11 | | ML-Projekt:  | |
 12 | | Sandsynlighedsregning, Bayes sætning||
-13 | | ML-Projekt: Naiv Bayes algoritme | |
+13 | | Naiv Bayes algoritme | |
 14 | | Lineær regression | |
 15 | | Logistisk regression |  |
 16 | | ML-Projekt: Regression | |
