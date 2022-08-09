@@ -62,13 +62,12 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 9 |PD:5(Linear regression..) | Lineær regression |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 9 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
 10 |PD:5(Naive Bayes..)  | Naiv Bayes-algoritmen | |
-11 |PD:5(Lineær Regression..) | Lineær regression | |
-12 | | Logistisk regression |  |
-13 | | Regression | |
-14 | | Perceptroner |  |
-15 | | Lineært Neurale netværk |  |
-16 | | Multilinære Neurale netværk |  |
-17 | | Neurale netværk |  |
-18 | | Dyb læring |  |
-19 | | Convolutional neurale netværk |  |
+11 | | Logistisk regression |  |
+12 | | Regression | |
+13 | | Perceptroner |  |
+14 | | Lineært Neurale netværk |  |
+15 | | Multilinære Neurale netværk |  |
+16 | | Neurale netværk |  |
+17 | | Dyb læring |  |
+18 | | Convolutional neurale netværk |  |
 
