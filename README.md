@@ -59,9 +59,10 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 4 |PY:16,PD:4 | Python IV: Matplotlib  |ØP: 43-48 |
 5 |PD:5(kNN)  | KNN-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
 7 |PD:5(kNN) | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
-8 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
+9 |PD:5(Linear regression..) | Lineær regression |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
+9 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
 10 |PD:5(Naive Bayes..)  | Naiv Bayes-algoritmen | |
-11 | | Lineær regression | |
+11 |PD:5(Lineær Regression..) | Lineær regression | |
 12 | | Logistisk regression |  |
 13 | | Regression | |
 14 | | Perceptroner |  |
