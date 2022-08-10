@@ -32,7 +32,7 @@ Vi bruger uddrag af følgende to gratis og opensource bøger:
 
 
 Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet. 
-(PY) og (PD) er primær litteratur mens resterende sekundær litteratur. (ML) og (ML2) er supplerende litteratur til dem som gerne vil have en bedre forståelse af matematikken bag. 
+(PY) og (PD) er primær litteratur mens resterende er sekundær litteratur. (ML) og (ML2) er supplerende litteratur til dem som gerne vil have en bedre forståelse af matematikken bag. 
 
 ## Slides
 Mine slides er tilgængelige [her](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/maskinel%C3%A6ring.pptx) (kryperet - password udleveres ved start).
