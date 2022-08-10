@@ -33,7 +33,7 @@ Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør de
 (PY) og (PD) er primær litteratur mens resterende sekundær litteratur. (ML) og (ML2) er supplerende litteratur til dem som gerne vil have en bedre forståelse af matematikken bag. 
 
 ## Slides
-Mine slides er tilgængelige [her](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/maskinelæring.pptx) (kryperet - password udleveres ved start).
+Mine slides er tilgængelige [her](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/maskinel%C3%A6ring.pptx) (kryperet - password udleveres ved start).
 
 ## Software
 Man kan vælge at køre online uden at skulle installere noget og dokumenter kan nemt deles:
