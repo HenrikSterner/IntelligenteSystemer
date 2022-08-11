@@ -24,7 +24,7 @@ Vi bruger uddrag af følgende to gratis og opensource bøger:
 1. (PY) [A Whirlwind Tour of Python](https://jakevdp.github.io/WhirlwindTourOfPython/) af Jake VanderPlas. 
 2. (PD) [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) af Jake VanderPlas.
 3. (DI) [Dive into Deep Learning](https://d2l.ai/) af Aston Zhang et al.
-4. (ØP) [Øvelser og projekter](https://github.com/HenrikSterner/PythonForDataScience/blob/master/exercises/exercises.ipynb) af Henrik Sterner.
+4. (ØP) [Øvelser og projekter](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/exercises.ipynb) af Henrik Sterner.
 5. (ML) [Mathematics for machine learning](https://mml-book.github.io/) af Deisenroth et al.
 6. (ML2) [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html)
 7. (NP) [Numpy øvelser](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) med [svar](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_solutions.md)
