@@ -25,10 +25,11 @@ Vi bruger uddrag af følgende to gratis og opensource bøger:
 2. (PD) [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) af Jake VanderPlas.
 3. (DI) [Dive into Deep Learning](https://d2l.ai/) af Aston Zhang et al.
 4. (ØP) [Øvelser og projekter](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/exercises.ipynb) af Henrik Sterner.
-5. (ML) [Mathematics for machine learning](https://mml-book.github.io/) af Deisenroth et al.
-6. (ML2) [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html)
-7. (NP) [Numpy øvelser](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) med [svar](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_solutions.md)
-8. (MP) [Matplotlib øvelser](https://pynative.com/python-matplotlib-exercise/) med indlejrede svar.
+5. (ØP2) [Nybegynder Øvelser] (https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/easyexercises.ipynb)
+6. (ML) [Mathematics for machine learning](https://mml-book.github.io/) af Deisenroth et al.
+7. (ML2) [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html)
+8. (NP) [Numpy øvelser](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) med [svar](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_solutions.md)
+9. (MP) [Matplotlib øvelser](https://pynative.com/python-matplotlib-exercise/) med indlejrede svar.
 
 
 Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet. 
@@ -57,8 +58,8 @@ Lineær algebra og sandsynlighedsregning, som er centrale forudsætninger for at
 
 Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 ----------- | ----------- | ----------------------------| ----------- |
-1 |PY:1-6 | Python I: Variabler, sekvens og selektion | ØP:1-6     |
-2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  |ØP:7-14,18-26,33,37 |
+1 |PY:1-6 | Python I: Variabler, sekvens og selektion | ØP2: 1-13, ØP:1-6     |
+2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  |ØP2: 1-13,ØP:7-14,18-26,33,37 |
 3 |PY:16,PD:2 | Python III: Numpy  |ØP: 43-48 (eksl. 47),mindst 10 fra (NP) |
 4 |PY:16,PD:4 | Python IV: Matplotlib  |ØP: 43-48(eksl. 47), alle 10 fra (MP) |
 5-6 |PD:5(kNN)  | KNN-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
