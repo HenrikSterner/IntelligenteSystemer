@@ -28,8 +28,9 @@ Vi bruger uddrag af følgende to gratis og opensource bøger:
 5. (ØP2) [Nybegynder øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/easyexercises.ipynb) af Henrik Sterner. 
 6. (ML) [Mathematics for machine learning](https://mml-book.github.io/) af Deisenroth et al.
 7. (ML2) [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html)
-8. (NP) [Numpy øvelser](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) med [svar](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_solutions.md)
-9. (MP) [Matplotlib øvelser](https://pynative.com/python-matplotlib-exercise/) med indlejrede svar.
+8. (NP) [Numpy øvelser for begyndere](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/numpyexercises.ipynb)
+9. (NPe) [Numpy øvelser](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) med [svar](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_solutions.md)
+10. (MP) [Matplotlib øvelser](https://pynative.com/python-matplotlib-exercise/) med indlejrede svar.
 
 
 Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet. 
