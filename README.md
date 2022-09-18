@@ -67,7 +67,7 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 7-8 |PD:5(kNN) | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
 9-10 |PD:5(Linear regression..) | Lineær regression |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 11 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
-12 |PD:5(Naive Bayes..)  | Naiv Bayes-algoritmen | |
+12 |PD:5(Naive Bayes..)  | Projekt Naiv Bayes-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
 13-14 | | Logistisk regression |  |
 15 | | Perceptroner |  |
 16 | | Lineært Neurale netværk |  |
