@@ -59,8 +59,8 @@ Lineær algebra og sandsynlighedsregning, som er centrale forudsætninger for at
 
 Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 ----------- | ----------- | ----------------------------| ----------- |
-1 |PY:1-6 | Python I: Variabler, sekvens og selektion | ØP2: alle øvelser, ØP:1-6     |
-2 |PY:7-11 | Python II: Iterationer, funktioner, fejl og lister  |ØP2: 1-13,ØP:7-14,18-26,33,37 |
+1 |PY:1-6 | [Python I: Variabler, sekvens og selektion](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidespython.pdf) | ØP2: alle øvelser, ØP:1-6     |
+2 |PY:7-11 | [Python II: Iterationer, funktioner, fejl og lister](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidespython.pdf)  |ØP2: 1-13,ØP:7-14,18-26,33,37 |
 3 |PY:16,PD:2 | Python III: Numpy  |ØP: 43-48 (eksl. 47),mindst 10 fra (NP) |
 4 |PY:16,PD:4 | Python IV: Matplotlib  |ØP: 43-48(eksl. 47), alle 10 fra (MP) |
 5-6 |PD:5(kNN)  | KNN-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
