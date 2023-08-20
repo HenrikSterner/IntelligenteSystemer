@@ -28,10 +28,12 @@ pandoc -t docx -o slidespython.docx slidespython.md
 ```
 
 # Øvelser og software brugt
-Det er ekstremt vigtigt at lave en masse øvelser. Da det træner de grundlæggende strukturer. 
+Det er ekstremt vigtigt at lave en masse øvelser. Da det træner brugen af de grundlæggende strukturer. Programmering er en praktisk disciplin - et håndværk. Og man bliver ikke god til et håndværk uden at øve sig.
 
 Øvelserne er lavet så de kan løses i Python
-ved brug af Jupyter Notebook eller Google Colab.
+ved brug af eksempelvis Jupyter Notebook eller Google Colab.
+
+Undlad at få hjælp fra AI m.m. Det lærer du ikke noget af. 
 
 # Hvad er Google Colab?
 - Google Colab er et interaktivt programmeringsmiljø
