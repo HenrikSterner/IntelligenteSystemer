@@ -297,10 +297,344 @@ Hvis vi vil lægge to vektorer sammen, så skal de have samme længde:
 print(v + np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])) # [ 8  6  5 10 13 15  8 11 14]
 ```
 
+# Vigtige funktioner på vektorer i numpy - del I
+Numpy tilbyder en række funktioner til matematiske, statistiske og logiske operationer på vektorer. Herunder en liste over de vigtigste funktioner:
+- np.sum: summerer alle elementer i en vektor
+- np.mean: beregner gennemsnittet af alle elementer i en vektor
+- np.std: beregner standardafvigelsen af alle elementer i en vektor
+- np.min: finder det mindste element i en vektor
+- np.max: finder det største element i en vektor
 
+# Eksempel på vigtige funktioner på vektorer i numpy - del I
+```python
+v=np.array([7, 4, 2, 6, 8, 9, 1, 3, 5])
+print(np.sum(v)) # 45
+print(np.mean(v)) # 5.0
+print(np.std(v)) # 2.581988897471611
+print(np.min(v)) # 1
+print(np.max(v)) # 9
+```
+# Vigtige funktioner på vektorer i numpy - del II
+- np.argmin: finder indekset for det mindste element i en vektor
+- np.argmax: finder indekset for det største element i en vektor
+- np.sort: sorterer alle elementer i en vektor
+- np.unique: finder alle unikke elementer i en vektor
+- np.abs: finder absolutværdien af alle elementer i en vektor
+- np.round: runder alle elementer i en vektor
+
+# Eksempler på vigtige funktioner på vektorer i numpy - del II
+```python
+v=np.array([7, 4, 2, 6, 8, 9, 1, 3, 5])
+print(np.argmin(v)) # 6
+print(np.argmax(v)) # 5
+print(np.sort(v)) # [1 2 3 4 5 6 7 8 9]
+print(np.unique(v)) # [1 2 3 4 5 6 7 8 9]
+print(np.abs(v)) # [7 4 2 6 8 9 1 3 5]
+w = np.array([7.2, 4.4, 2.6, 6.8, 8.9, 9.1, 1.3, 3.5, 5.7])
+print(np.round(w)) # [7. 4. 3. 7. 9. 9. 1. 4. 6.]
+```
+
+
+# Viktige funktioner på vektorer i numpy - del III
+- np.where: finder indekset for alle elementer i en vektor, som opfylder en bestemt betingelse
+- np.concatenate: samler to vektorer til en vektor
+- np.append: tilføjer et element til en vektor
+- np.delete: fjerner et element fra en vektor
+- np.insert: indsætter et element i en vektor
+- np.copy: kopierer en vektor
+- np.reshape: ændrer formen på en vektor
+
+# Eksempel på vigtige funktioner på vektorer i numpy - del III
+```python 
+v= np.array([7, 4, 2, 6, 8, 9, 1, 3, 5])
+w = np.array([7.2, 4.4, 2.6, 6.8, 8.9, 9.1, 1.3, 3.5, 5.7])
+print(np.where(v > 5)) # (array([0, 3, 4, 5], dtype=int64),)
+print(np.concatenate((v, w))) # [7.  4.  2.  6.  8.  9.  1.  3.  5.  7.2 4.4 2.6 6.8 8.9 9.1 1.3 3.5 5.7]
+print(np.append(v, 10)) # [ 7  4  2  6  8  9  1  3  5 10]
+print(np.delete(v, 0)) # [4 2 6 8 9 1 3 5]
+print(np.insert(v, 0, 10)) # [10  7  4  2  6  8  9  1  3  5]
+print(np.copy(v)) # [7 4 2 6 8 9 1 3 5]
+print(np.reshape(v, (3, 3))) # [[7 4 2] [6 8 9] [1 3 5]]
+```
+
+# Transponering af vektorer
+En vektor kan transponeres ved at ændre dens form fra en n x 1 matrix til en 1 x n matrix. Dvs. en matrix med en række og n kolonner til en matrix med n rækker og en kolonne.
+Herunder en matematisk definition af transponering af vektorer:
+$$ \vec{v}^T = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}^T = \begin{bmatrix} v_1 & v_2 & \cdots & v_n \end{bmatrix} $$
+I Python kan vi transponere en vektor ved at bruge funktionen `transpose`:
+```python
+print(np.transpose(v))
+```
+```bash
+[7 4 2 6 8 9 1 3 5]
+```
 
 
 # Definition af en matrix
 En matrix er en samling af tal, som er ordnet i rækker og kolonner. En matrix med m rækker og n kolonner kan repræsenteres som en m x n matrix.
 $$ \vec{v} = \begin{bmatrix} v_1 & v_2 & \cdots & v_n \end{bmatrix} $$
 
+# Indexing af matricer i numpy
+Betragt 3x3 matricen, A bestående af 3 rækker og 3 kolonner med tallene 1 til 9:
+$$ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} $$
+Vi kan indexere matricer på samme måde som vi indexere lister i Python:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(A[0, 0]) # 1
+print(A[0, 1]) # 2
+print(A[0, 2]) # 3
+#...
+print(A[2, 0]) # 7
+print(A[2, 1]) # 8
+print(A[2, 2]) # 9
+```
+
+# Slice af matricer i numpy
+Vi kan slice matricer på samme måde som vi slicer lister i Python ved brug af `:`. Herunder en generel formel for slicing af matricer:
+```python
+print(A[start:stop:step, start:stop:step])
+```
+- start: startindeks
+- stop: stopindeks
+- step: skridt
+  
+# Eksempel på slicing af matricer
+Betragt 3x3 matricen, A bestående af 3 rækker og 3 kolonner med tallene 1 til 9:
+$$ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} $$
+
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(A[0:2, 0:2]) # [[1 2] [4 5]]
+print(A[0:2, 1:3]) # [[2 3] [5 6]]
+print(A[1:3, 0:2]) # [[4 5] [7 8]]
+print(A[1:3, 1:3]) # [[5 6] [8 9]]
+```
+
+# : i slicing af matricer
+Hvis vi udelader startindeks, så sættes startindeks til 0:
+```python
+print(A[:2, :2]) # [[1 2] [4 5]]
+```
+Hvis vi udelader stopindeks, så sættes stopindeks til længden af vektoren:
+```python
+print(A[1:, 1:]) # [[5 6] [8 9]]
+```
+Hvis vi udelader skridt, så sættes skridt til 1:
+```python
+print(A[0:3:1, 0:3:1]) # [[1 2 3] [4 5 6] [7 8 9]]
+print(A[0:3, 0:3]) # [[1 2 3] [4 5 6] [7 8 9]]
+```
+
+# Broadcasting i numpy
+Numpy understøtter broadcasting, som betyder at vi kan udføre operationer på matricer med forskellige længder. Hvis vi eksempelvis vil lægge en matrix til en skalar, så vil numpy automatisk kopiere matricen, så den får samme længde som skalarværdien:
+```python
+print(A + 2) # [[ 3  4  5] [ 6  7  8] [ 9 10 11]]
+``` 
+Hvis vi vil lægge to matricer sammen, så skal de have samme længde:
+```python
+print(A + np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) # [[ 2  4  6] [ 8 10 12] [14 16 18]]
+```
+
+# Vigtige funktioner på matricer i numpy - del I
+Numpy tilbyder en række funktioner til matematiske, statistiske og logiske operationer på matricer. Herunder en liste over de vigtigste funktioner:
+- np.sum: summerer alle elementer i en matrix
+- np.mean: beregner gennemsnittet af alle elementer i en matrix
+- np.std: beregner standardafvigelsen af alle elementer i en matrix
+- np.min: finder det mindste element i en matrix
+- np.max: finder det største element i en matrix
+- np.argmin: finder indekset for det mindste element i en matrix
+- np.argmax: finder indekset for det største element i en matrix
+- np.sort: sorterer alle elementer i en matrix
+
+# Vigtige funktioner på matricer i numpy - del II
+- np.unique: finder alle unikke elementer i en matrix
+- np.abs: finder absolutværdien af alle elementer i en matrix
+- np.round: runder alle elementer i en matrix
+- np.where: finder indekset for alle elementer i en matrix, som opfylder en bestemt betingelse
+- np.concatenate: samler to matricer til en matrix
+- np.append: tilføjer et element til en matrix
+- np.delete: fjerner et element fra en matrix
+- np.insert: indsætter et element i en matrix
+- np.copy: kopierer en matrix
+- np.reshape: ændrer formen på en matrix
+
+# np.sum på matricer
+np.sum kan bruges til at beregne summen af alle elementer i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.sum(A)) # 45
+print(np.sum(A, axis=0)) # [12 15 18]
+print(np.sum(A, axis=1)) # [ 6 15 24]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.mean på matricer
+np.mean kan bruges til at beregne gennemsnittet af alle elementer i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.mean(A)) # 5.0
+print(np.mean(A, axis=0)) # [4. 5. 6.]
+print(np.mean(A, axis=1)) # [2. 5. 8.]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.std på matricer
+np.std kan bruges til at beregne standardafvigelsen af alle elementer i en matrix. Standardafvigelsen er et mål for spredningen af elementerne i en matrix. Herunder en matematisk definition af standardafvigelsen:
+$$ \sigma = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2} $$
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.std(A)) # 2.581988897471611
+print(np.std(A, axis=0)) # [2.44948974 2.44948974 2.44948974]
+print(np.std(A, axis=1)) # [0.81649658 0.81649658 0.81649658]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.min på matricer
+np.min kan bruges til at finde det mindste element i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.min(A)) # 1
+print(np.min(A, axis=0)) # [1 2 3]
+print(np.min(A, axis=1)) # [1 4 7]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.max på matricer
+np.max kan bruges til at finde det største element i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.max(A)) # 9
+print(np.max(A, axis=0)) # [7 8 9]
+print(np.max(A, axis=1)) # [3 6 9]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.argmin på matricer
+np.argmin kan bruges til at finde indekset for det mindste element i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.argmin(A)) # 0
+print(np.argmin(A, axis=0)) # [0 0 0]
+print(np.argmin(A, axis=1)) # [0 0 0]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.argmax på matricer
+np.argmax kan bruges til at finde indekset for det største element i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.argmax(A)) # 8
+print(np.argmax(A, axis=0)) # [2 2 2]
+print(np.argmax(A, axis=1)) # [2 2 2]
+```
+
+# np.sort på matricer
+np.sort kan bruges til at sortere alle elementer i en matrix:
+```python
+A = np.array([[3, 2, 1], [6, 5, 4], [9, 8, 7]])
+print(np.sort(A)) # [[1 2 3] [4 5 6] [7 8 9]]
+print(np.sort(A, axis=0)) # [[3 2 1] [6 5 4] [9 8 7]]
+print(np.sort(A, axis=1)) # [[1 2 3] [4 5 6] [7 8 9]]
+```
+axis =0 betyder at vi finder det mindste element i hver kolonne. axis = 1 betyder at vi finder det mindste element i hver række.
+
+# np.unique på matricer
+np.unique kan bruges til at finde alle unikke elementer i en matrix:
+```python
+A = np.array([[3, 2, 1], [6, 5, 4], [9, 8, 7]])
+print(np.unique(A)) # [1 2 3 4 5 6 7 8 9]
+```
+
+# np.abs på matricer
+np.abs kan bruges til at finde absolutværdien af alle elementer i en matrix:
+```python
+A = np.array([[3, -2, 1], [-6, 5, -4], [9, -8, 7]])
+print(np.abs(A)) # [[3 2 1] [6 5 4] [9 8 7]]
+```
+
+# np.round på matricer
+np.round kan bruges til at runde alle elementer i en matrix:
+```python
+A = np.array([[3.2, -2.4, 1.6], [-6.8, 5.9, -4.1], [9.3, -8.5, 7.7]])
+print(np.round(A)) # [[ 3. -2.  2.] [-7.  6. -4.] [ 9. -8.  8.]]
+```
+
+# np.where på matricer
+np.where kan bruges til at finde indekset for alle elementer i en matrix, som opfylder en bestemt betingelse:
+```python
+A = np.array([[3, -2, 1], [-6, 5, -4], [9, -8, 7]])
+print(np.where(A > 0)) # (array([0, 0, 1, 1, 2, 2], dtype=int64), array([0, 2, 1, 2, 0, 2], dtype=int64))
+```
+
+# np.concatenate på matricer
+np.concatenate kan bruges til at samle to matricer til en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+B = np.array([[7, 8, 9], [10, 11, 12]])
+print(np.concatenate((A, B))) # [[ 1  2  3] [ 4  5  6] [ 7  8  9] [10 11 12]]
+```
+
+# np.append på matricer
+np.append kan bruges til at tilføje et element til en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.append(A, 7)) # [1 2 3 4 5 6 7]
+```
+
+# np.delete på matricer
+np.delete kan bruges til at fjerne et element fra en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.delete(A, 0)) # [2 3 4 5 6]
+```
+
+# np.insert på matricer
+np.insert kan bruges til at indsætte et element i en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.insert(A, 0, 7)) # [7 1 2 3 4 5 6]
+```
+
+# np.copy på matricer
+np.copy kan bruges til at kopiere en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.copy(A)) # [[1 2 3] [4 5 6]]
+```
+
+# np.reshape på matricer
+np.reshape kan bruges til at ændre formen på en matrix:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.reshape(A, (3, 2))) # [[1 2] [3 4] [5 6]]
+B = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.reshape(B, (9, 1))) # [[1] [2] [3] [4] [5] [6] [7] [8] [9]]
+C = np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]]])
+print(np.reshape(C, (9, 1))) # [[1] [2] [3] [4] [5] [6] [7] [8] [9]]
+```
+```
+
+# np.flatten på matricer
+np.flatten kan bruges til at ændre formen på en matrix til en vektor:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.flatten(A)) # [1 2 3 4 5 6]
+B = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(np.flatten(B)) # [1 2 3 4 5 6 7 8 9]
+C= np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]]])
+print(np.flatten(C)) # [1 2 3 4 5 6 7 8 9]
+```
+
+# Transponering af matricer
+En matrix kan transponeres ved at ændre dens form fra en m x n matrix til en n x m matrix. Dvs. en matrix med m rækker og n kolonner til en matrix med n rækker og m kolonner.
+Herunder en matematisk definition af transponering af matricer:
+$$ A^T = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}^T = \begin{bmatrix} a_{11} & a_{21} & \cdots & a_{m1} \\ a_{12} & a_{22} & \cdots & a_{m2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1n} & a_{2n} & \cdots & a_{mn} \end{bmatrix} $$
+
+# Eksempel på transponering af matricer
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.transpose(A)) # [[1 4] [2 5] [3 6]]
+B= np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]]])
+print(np.transpose(B)) # [[[1 4 7] [2 5 8] [3 6 9]]]
+```
+```
