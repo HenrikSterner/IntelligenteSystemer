@@ -63,7 +63,7 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 2 |PY:7-11 | [Python II: Iterationer, funktioner, fejl og lister](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidespython.pdf)  |ØP2: 1-13,ØP:7-14,18-26,33,37 |
 3 |PY:16,PD:2 | [Python III: Beregninger med Numpy](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/numpy.pdf)  |ØP: 43-48 (eksl. 47),mindst 10 fra (NP) |
 4 |PY:16,PD:4| [Python IV: Grafik med Matplotlib](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidesmatplotlib.pdf)  |ØP: 43-48(eksl. 47), alle 10 fra (MP) |
-5-6 |PD:5(kNN)  | KNN-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
+5-6 |PD:5(kNN)  | [KNN-algoritmen (jupyter)](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/knn_jupyter.ipynb) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
 7-8 |PD:5(kNN) | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
 9-10 |PD:5(Linear regression..) | Lineær regression |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 11 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
