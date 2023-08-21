@@ -4,6 +4,26 @@ Matplotlib er en grafikpakke til Python, som er inspireret af MATLAB. Den er sæ
 
 Matplotlib har en række forskellige moduler, som kan bruges til forskellige formål. Vi vil her gennemgå de mest almindelige moduler.
 
+# Om brugen af disse slides
+- Disse slides forsøger at eksemplifere en lang række af de vigtige begreber i Python
+- De må på ingen måde kopieres uden tilladelse fra Henrik Sterner
+- De er lavet i markdown og kan derfor nemt konverteres til andre formater
+- Ved brug af Visual Studio Code kan de konverteres til HTML, PDF, PowerPoint, Word, LaTeX og mange andre formater 
+- Slides er tilgængelige på github.com/henriksterner/IntelligenteSystemer/
+
+
+# Konvertere slides til andre formater
+
+- Fra markdown til pdf ved brug af pandoc: 
+```bash 
+pandoc -t beamer -o slidespython.pdf slidesmatplotlib.md
+```
+- Fra markdown til word ved brug af pandoc: 
+```bash 
+pandoc -t docx -o slidespython.docx slidesmatplotlib.md
+```
+
+
 # Installation af matplotlib
 Til at starte med skal vi installere matplotlib. Det gøres nemmest ved at åbne en terminal og skrive:
 
