@@ -3,6 +3,24 @@ Numpy er et bibliotek til Python, som gør det muligt at arbejde med matricer og
 
 Numpy tilbyder også en række funktioner til matematiske, statistiske og logiske operationer på arrays.
 
+# Om brugen af disse slides
+- Disse slides forsøger at eksemplifere en lang række af de vigtige begreber i Numpy
+- De må på ingen måde kopieres uden tilladelse fra Henrik Sterner
+- De er lavet i markdown og kan derfor nemt konverteres til andre formater
+- Ved brug af Visual Studio Code kan de konverteres til HTML, PDF, PowerPoint, Word, LaTeX og mange andre formater 
+- Slides er tilgængelige på github.com/henriksterner/IntelligenteSystemer/
+
+# Konvertere slides til andre formater
+
+- Fra markdown til pdf ved brug af pandoc: 
+```bash
+pandoc -t beamer -V theme:metropolis -o numpy.pdf numpy.md
+```
+- Fra markdown til word ved brug af pandoc: 
+```bash
+pandoc -o numpy.docx numpy.md
+```
+
 # Hvorfor bruge NumPy?
 * NumPy er meget hurtigere end at bruge Python-lister til matematiske operationer.
 * Det er også mere bekvemt og lettere at læse.
@@ -637,4 +655,62 @@ print(np.transpose(A)) # [[1 4] [2 5] [3 6]]
 B= np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]]])
 print(np.transpose(B)) # [[[1 4 7] [2 5 8] [3 6 9]]]
 ```
+
+# Matrix multiplikation
+Matrix multiplikation er en operation, som kan udføres på to matricer. Hvis vi har to matricer, A og B, så kan vi udføre matrix multiplikation på følgende måde:
+$$ A \cdot B = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} & \cdots & b_{1p} \\ b_{21} & b_{22} & \cdots & b_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ b_{n1} & b_{n2} & \cdots & b_{np} \end{bmatrix} = \begin{bmatrix} c_{11} & c_{12} & \cdots & c_{1p} \\ c_{21} & c_{22} & \cdots & c_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ c_{m1} & c_{m2} & \cdots & c_{mp} \end{bmatrix} $$
+Hvor:
+$$ c_{ij} = \sum_{k=1}^n a_{ik} \cdot b_{kj} $$
+
+# Eksempel på matrix multiplikation
+I vektor notation kan vi skrive matrix multiplikation på følgende måde:
+$$ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \cdot \begin{bmatrix} 7 & 8 \\ 9 & 10 \\ 11 & 12 \end{bmatrix} = \begin{bmatrix} 1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 & 1 \cdot 8 + 2 \cdot 10 + 3 \cdot 12 \\ 4 \cdot 7 + 5 \cdot 9 + 6 \cdot 11 & 4 \cdot 8 + 5 \cdot 10 + 6 \cdot 12 \end{bmatrix} = \begin{bmatrix} 58 & 64 \\ 139 & 154 \end{bmatrix} $$
+
+I Python kan vi udføre matrix multiplikation ved at bruge funktionen `dot`:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+B = np.array([[7, 8], [9, 10], [11, 12]])
+print(np.dot(A, B)) # [[ 58  64] [139 154]]
 ```
+
+# Matrix multiplikation med vektorer
+Hvis vi har en matrix, A, og en vektor, v, så kan vi udføre matrix multiplikation på følgende måde:
+$$ A \cdot \vec{v} = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix} \cdot \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix} = \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_m \end{bmatrix} $$
+Hvor:
+$$ c_i = \sum_{k=1}^n a_{ik} \cdot v_k $$
+
+# Eksempel på matrix multiplikation med vektorer
+I vektor notation kan vi skrive matrix multiplikation med vektorer på følgende måde:
+$$ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \cdot \begin{bmatrix} 7 \\ 8 \\ 9 \end{bmatrix} = \begin{bmatrix} 1 \cdot 7 + 2 \cdot 8 + 3 \cdot 9 \\ 4 \cdot 7 + 5 \cdot 8 + 6 \cdot 9 \end{bmatrix} = \begin{bmatrix} 50 \\ 122 \end{bmatrix} $$
+I Python kan vi udføre matrix multiplikation med vektorer ved at bruge funktionen `dot`:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+v = np.array([7, 8, 9])
+print(np.dot(A, v)) # [ 50 122]
+```
+
+# Matrix multiplikation med skalarer
+Hvis vi har en matrix, A, og en skalar, s, så kan vi udføre matrix multiplikation på følgende måde:
+$$ s \cdot A = s \cdot \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix} = \begin{bmatrix} s \cdot a_{11} & s \cdot a_{12} & \cdots & s \cdot a_{1n} \\ s \cdot a_{21} & s \cdot a_{22} & \cdots & s \cdot a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ s \cdot a_{m1} & s \cdot a_{m2} & \cdots & s \cdot a_{mn} \end{bmatrix} $$
+
+# Eksempel på matrix multiplikation med skalarer
+I vektor notation kan vi skrive matrix multiplikation med skalarer på følgende måde:
+$$ 2 \cdot \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} = \begin{bmatrix} 2 \cdot 1 & 2 \cdot 2 & 2 \cdot 3 \\ 2 \cdot 4 & 2 \cdot 5 & 2 \cdot 6 \end{bmatrix} = \begin{bmatrix} 2 & 4 & 6 \\ 8 & 10 & 12 \end{bmatrix} $$
+
+I Python kan vi udføre matrix multiplikation med skalarer ved at bruge funktionen `dot`:
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+print(np.dot(2, A)) # [[ 2  4  6] [ 8 10 12]]
+```
+
+# Operationer på matricer
+Numpy understøtter en lang række andre operationer på matricer. Herunder en liste over de vigtigste operationer:
+- Addition: `+`
+- Subtraktion: `-`
+- Multiplikation: `*`
+- Division: `/`
+- Potens: `**`
+- Modulo: `%`
+- Determinant: `linalg.det`
+- Norm: `linalg.norm`
+
