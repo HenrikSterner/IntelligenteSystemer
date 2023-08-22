@@ -30,7 +30,9 @@ Vi bruger uddrag af følgende to gratis og opensource bøger:
 7. (ML2) [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html)
 8. (NP) [Numpy øvelser for begyndere](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/numpyexercises.ipynb)
 9. (NPe) [Numpy øvelser](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.ipynb) med [svar](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises_with_solutions.md)
-10. (MP) [Matplotlib øvelser](https://pynative.com/python-matplotlib-exercise/) med indlejrede svar.
+10. (MP) [Matplotlib øvelser](https://pynative.com/python-matplotlib-exercise/) med indlejrede svar. 
+11. (MP2) [Matplotlib øvelser for begyndere](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/matplotlibexercises.md)
+12. (SP) [Streamlit øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/streamlitexercises.md)
 
 
 Bøgerne er gratis, og rummer en række kapitler i jupyter-formatet, som gør det muligt at kombinere tekst og kode. Derudover vil der være uddrag fra andre bøger og materialer fra nettet. 
@@ -62,10 +64,10 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 1 |PY:1-6 | [Python I: Variabler, sekvens og selektion](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidespython.pdf) | ØP2: alle øvelser, ØP:1-6     |
 2 |PY:7-11 | [Python II: Iterationer, funktioner, fejl og lister](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidespython.pdf)  |ØP2: 1-13,ØP:7-14,18-26,33,37 |
 3 |PY:16,PD:2 | [Python III: Beregninger med Numpy](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/numpy.pdf)  |ØP: 43-48 (eksl. 47),mindst 10 fra (NP) |
-4 |PY:16,PD:4| [Python IV: Grafik med Matplotlib](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidesmatplotlib.pdf)  |ØP: 43-48(eksl. 47), alle 10 fra (MP) |
+4 |PY:16,PD:4| [Python IV: Grafik med Matplotlib](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidesmatplotlib.pdf)  |MP2, ØP: 43-48(eksl. 47), evt. de 10 fra (MP) |
 5-6 |PD:5(kNN)  | [KNN-algoritmen (jupyter)](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/knn_jupyter.ipynb) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
-7 |PD:5(kNN) | [Datavisualisering i streamlit](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/streamlit.pdf) | |
-8 |PD:5(kNN) | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
+7 |PD:5(kNN),slides | [Datavisualisering i streamlit](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/streamlit.pdf) | SP: 1-20 |
+8 |PD:5(kmeans),slides | K-means algoritmen |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
 9-10 |PD:5(Linear regression..) | Lineær regression |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 11 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
 12 |PD:5(Naive Bayes..)  | Projekt Naiv Bayes-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
