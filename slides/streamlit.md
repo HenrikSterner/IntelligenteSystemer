@@ -5,6 +5,13 @@ Datavisualisering er en vigtig del af data science og maskinelæring. Det er vig
 
 Til dette formål findes der mange forskellige værktøjer. I denne workshop vil vi kigge på et af dem: Streamlit.
 
+# Om brugen af disse slides
+- Disse slides forsøger at eksemplifere en lang række af de vigtige begreber i streamlit
+- De må på INGEN MÅDE KOPIERES ELLER BENYTTES uden tilladelse fra Henrik Sterner
+- De er lavet i markdown og kan derfor nemt konverteres til andre formater
+- Ved brug af Visual Studio Code kan de konverteres til HTML, PDF, PowerPoint, Word, LaTeX og mange andre formater 
+- Slides er tilgængelige på github.com/henriksterner/IntelligenteSystemer/slides
+
 # Hvad er Streamlit?
 Streamlit er et værktøj til at lave interaktive webapplikationer til visualisering af data. Det er et open source projekt, der er udviklet af et startup i Silicon Valley. Streamlit er skrevet i Python og er derfor nemt at bruge sammen med andre Python-baserede værktøjer til data science og maskinelæring.
 
@@ -207,6 +214,18 @@ with st.beta_expander("Klik her"):
 ```
 Dette vil lave en ekspanderbar sektion med en knap. Hvis du trykker på knappen vil den skifte farve.
 
+# Radio knapper i Streamlit
+Streamlit har indbygget støtte til radio knapper. Du kan bruge dette til at lave radio knapper i din applikation.
+For at lave radio knapper kan du bruge følgende kode:
+```python
+import streamlit as st
+st.write("## Radio knapper")
+option = st.radio("Vælg en værdi", ["Værdi 1", "Værdi 2", "Værdi 3"])
+st.write(f"Du valgte {option}")
+```
+Dette vil lave radio knapper med teksten "Vælg en værdi" og med tre værdier: "Værdi 1", "Værdi 2" og "Værdi 3". Hvis du vælger en af værdierne vil den skifte farve.
+
+
 # Markdown
 Markdown er en måde at formatere tekst i din applikation. Du kan bruge markdown til at vise tekst i din applikation.
 For at lave markdown kan du bruge følgende kode:
@@ -352,6 +371,32 @@ Dette vil publicere din app på streamlit share. Du kan nu dele et link til din 
 # Hvis du vil vide mere
 Hvis du vil vide mere om Streamlit kan du læse mere på Streamlits hjemmeside: https://streamlit.io/
 
+# Forslag til opgaver
+* Lav promilleberegner i Streamlit
+* Lav en CPR-validering i Streamlit
+* Lav en valutaomregner i Streamlit
+* Lav en randomiseret quote/citat generator i Streamlit
+* Lav en lommeregner i Streamlit
+* Lav et program der viser billeder i Streamlit
+* Lav en todo-liste i Streamlit
+* 
+
+# Flere forslag til opgaver 
+* Lav en bmi-beregner i Streamlit
+* Lav grafer af funktioner i Streamlit
+* Lav en kort applikation i Streamlit
+* Lav en applikation der viser data fra Danmarks Statistik i Streamlit
+* Lav en kalorieberegner i Streamlit
+* Lav en applikation der gemmer data i Streamlit
+* Lav en applikation der henter data i Streamlit
+* Lav en applikation der viser billeder i Streamlit
+  
+# Endnu flere forslag til opgaver
+* Ordoptælling: Opret en applikation, der tager en tekst som input og viser antallet af ord, sætninger og tegn i teksten.
+* Farvepaletgenerator: Opret en applikation, der genererer en tilfældig farvepalet baseret på brugerens valg af farveskala og antal farver.
+* Spørgeundersøgelse: Lav en enkel spørgeundersøgelse, hvor brugere kan besvare nogle spørgsmål ved hjælp af forskellige input-widgets som tekstinpt, radioknapper eller flervalgsfelter.
+* Portfolio Tracker: Lav en enkel applikation, hvor brugere kan indtaste aktier eller kryptovalutaer, de ejer, og applikationen viser den aktuelle værdi baseret på realtime-markedsdata.
+* Tipkalkulator: Lav en kalkulator, der beregner et anbefalet tipbeløb baseret på den samlede regning og en procentdel.
 
 
 
