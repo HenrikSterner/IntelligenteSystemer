@@ -1,4 +1,10 @@
 # Kunstig Intelligente Systemer: En introduktion til maskinelæring i Python
+
+Underviser: Henrik Sterner (datalog og matematiker, hst@nextkbh.dk)
+
+Denne side kan tilgås via [https://henriksterner.github.io/IntelligenteSystemer/](https://henriksterner.github.io/IntelligenteSystemer/).
+
+## Introduktion
 Kunstig intelligens i form af machine learning (maskinlæring) og deep learning (dyb læring) på neurale netværk transformerer alle aspekter af vores samfund i disse år – ikke mindst vores forståelse af verdenen og af os selv.  
 Det er et ekstremt spændende felt, hvor grænserne næsten dagligt rykkes for hvad vi troede var muligt for blot få år siden. Denne udvikling tager kun til i de kommende år i takt med, at stadig større datamængder bliver tilgængelige og at microchips/computere bliver stadig mindre, hurtigere og mere allestedsnærværende. 
 
