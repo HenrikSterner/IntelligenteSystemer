@@ -74,7 +74,7 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 5-6 |PD:5(kNN)  | [KNN-algoritmen (jupyter)](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/knn_jupyter.ipynb) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
 7 |slides | [Datavisualisering i streamlit](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/streamlit.pdf) | SP: 1-20 |
 8 |PD:5(kmeans),slides | [K-means algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/kmeans.ipynb) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
-9 |slides | [Lineær algebra](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/algebra.md) | |
+9 |slides | [Lineær algebra](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/algebra.pdf) | |
 10 |PD:5(Linear regression..) | [Lineær regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/linearregression.md) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 11 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
 12 |PD:5(Naive Bayes..)  | Projekt Naiv Bayes-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |

@@ -1,5 +1,7 @@
+
+
 # Introduktion til Lineær algreba til maskinelæring
-# Af Henrik Sterner
+## Af Henrik Sterner (hst@nextkbh.dk)
 I det følgende vil vi gennemgå de grundlæggende begreber indenfor lineær algebra, som er nødvendige for at forstå maskinelæring. Vi vil gennemgå de grundlæggende begreber og operationer på vektorer, matricer og tensorer. Vi vil også gennemgå de grundlæggende operationer på matricer, som er nødvendige for at forstå maskinelæring. 
 
 # Vektorer
@@ -118,13 +120,13 @@ Her er n=3 og m=3.
 
 # Operationer på matricer
 Vi kan udføre en række operationer på matricer. De vigtigste operationer er:
-- Addition af matricer 
-- Subtraktion af matricer
-- Multiplikation af en matrix med en skalar
-- Multiplikation af to matricer
-- Transponering af en matrix
-- Beregning af determinant
-- Beregning af invers matrix
+* Addition af matricer 
+* Subtraktion af matricer
+* Multiplikation af en matrix med en skalar
+* Multiplikation af to matricer
+* Transponering af en matrix
+* Beregning af determinant
+* Beregning af invers matrix
 
 # Addition af matricer
 Vi kan addere to matricer ved at addere de tilsvarende elementer i matricerne. Lad $X$ være en n x m matrix og $Y$ være en n x m matrix. Den generelle notation er:
@@ -139,7 +141,8 @@ $$X=\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}, Y=\begin{bmatrix} 7 & 
 
 kan vi beregne summen af matricerne $X$ og $Y$:
 
-$$X + Y = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} + \begin{bmatrix} 7 & 8 & 9 \\ 10 & 11 & 12 \end{bmatrix} = \begin{bmatrix} 1 + 7 & 2 + 8 & 3 + 9 \\ 4 + 10 & 5 + 11 & 6 + 12 \end{bmatrix} = \begin{bmatrix} 8 & 10 & 12 \\ 14 & 16 & 18 \end{bmatrix}$$
+$$X + Y = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} + \begin{bmatrix} 7 & 8 & 9 \\ 10 & 11 & 12 \end{bmatrix} = \begin{bmatrix} 1 + 7 & 2 + 8 & 3 + 9 \\ 4 + 10 & 5 + 11 & 6 + 12 \end{bmatrix}$$
+$$ = \begin{bmatrix} 8 & 10 & 12 \\ 14 & 16 & 18 \end{bmatrix}$$
 
 # Subtraktion af matricer
 Vi kan subtrahere to matricer ved at subtrahere de tilsvarende elementer i matricerne. Lad $X$ være en n x m matrix og $Y$ være en n x m matrix. Den generelle notation er:
@@ -154,7 +157,8 @@ $$X=\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}, Y=\begin{bmatrix} 7 & 
 
 kan vi beregne differencen mellem matricerne $X$ og $Y$:
 
-$$X - Y = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} - \begin{bmatrix} 7 & 8 & 9 \\ 10 & 11 & 12 \end{bmatrix} = \begin{bmatrix} 1 - 7 & 2 - 8 & 3 - 9 \\ 4 - 10 & 5 - 11 & 6 - 12 \end{bmatrix} = \begin{bmatrix} -6 & -6 & -6 \\ -6 & -6 & -6 \end{bmatrix}$$
+$$X - Y = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} - \begin{bmatrix} 7 & 8 & 9 \\ 10 & 11 & 12 \end{bmatrix} = \begin{bmatrix} 1 - 7 & 2 - 8 & 3 - 9 \\ 4 - 10 & 5 - 11 & 6 - 12 \end{bmatrix}$$
+$$ = \begin{bmatrix} -6 & -6 & -6 \\ -6 & -6 & -6 \end{bmatrix}$$
 
 # Multiplikation af en matrix med en skalar
 Vi kan multiplicere en matrix med en skalar ved at multiplicere hvert element i matricen med skalarværdien. Lad $X$ være en n x m matrix og $\alpha$ være en skalarværdi. Den generelle notation er:
@@ -214,6 +218,9 @@ $$\det X = \begin{vmatrix} x_{11} & x_{12} & \cdots & x_{1n} \\ x_{21} & x_{22} 
 Hvor $C_{1i}$ er kofaktoren for elementet $x_{1i}$:
 
 $$C_{1i} = (-1)^{1+i} M_{1i}$$
+
+## Determinanten af en matrix fortsat
+
 Her er $M_{1i}$ minorværdien for elementet $x_{1i}$:
 
 $$M_{1i} = \begin{vmatrix} x_{22} & \cdots & x_{2i-1} & x_{2i+1} & \cdots & x_{2n} \\ \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ x_{n2} & \cdots & x_{ni-1} & x_{ni+1} & \cdots & x_{nn} \end{vmatrix}$$
@@ -225,16 +232,20 @@ $$X=\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$$
 
 Vi starter med at beregne kofaktorerne:
 
-$$C_{11} = (-1)^{1+1} M_{11} = 1 \cdot \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} = 1 \cdot (5 \cdot 9 - 6 \cdot 8) = 1 \cdot (45 - 48) = 1 \cdot (-3) = -3$$
+$$C_{11} = (-1)^{1+1} M_{11} = 1 \cdot \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} = 1 \cdot (5 \cdot 9 - 6 \cdot 8)$$ 
+$$ = 1 \cdot (45 - 48) = 1 \cdot (-3) = -3$$
 
-$$C_{12} = (-1)^{1+2} M_{12} = -1 \cdot \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} = -1 \cdot (4 \cdot 9 - 6 \cdot 7) = -1 \cdot (36 - 42) = -1 \cdot (-6) = 6$$
+$$C_{12} = (-1)^{1+2} M_{12} = -1 \cdot \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} = -1 \cdot (4 \cdot 9 - 6 \cdot 7) $$
+$$ = -1 \cdot (36 - 42) = -1 \cdot (-6) = 6$$
 
-$$C_{13} = (-1)^{1+3} M_{13} = 1 \cdot \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = 1 \cdot (4 \cdot 8 - 5 \cdot 7) = 1 \cdot (32 - 35) = 1 \cdot (-3) = -3$$
+$$C_{13} = (-1)^{1+3} M_{13} = 1 \cdot \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = 1 \cdot (4 \cdot 8 - 5 \cdot 7) $$  
+$$=  1 \cdot (32 - 35) = 1 \cdot (-3) = -3$$
 
 Derefter beregner vi determinanten af matricen $X$:
 
 $$\det X = \begin{vmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{vmatrix} $$
-$$ = 1 \cdot C_{11} + 2 \cdot C_{12} + 3 \cdot C_{13} = 1 \cdot (-3) + 2 \cdot 6 + 3 \cdot (-3) = 0$$
+$$ = 1 \cdot C_{11} + 2 \cdot C_{12} + 3 \cdot C_{13}$$ 
+$$ = 1 \cdot (-3) + 2 \cdot 6 + 3 \cdot (-3) = 0$$
 
 # Invers matrix
 Vi kan beregne den inverse matrix ved at beregne kofaktorerne for hver enkelt element i matricen og derefter transponere matricen. Lad $X$ være en n x n matrix: 
