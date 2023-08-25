@@ -25,6 +25,7 @@ Denne notation kaldes rækkenotation.
 
 # Vigtige operationer på vektorer
 Vi kan udføre en række operationer på vektorer. De vigtigste operationer er:
+
 - Addition af vektorer
 - Subtraktion af vektorer
 - Multiplikation af en vektor med en skalar
@@ -120,13 +121,14 @@ Her er n=3 og m=3.
 
 # Operationer på matricer
 Vi kan udføre en række operationer på matricer. De vigtigste operationer er:
-* Addition af matricer 
-* Subtraktion af matricer
-* Multiplikation af en matrix med en skalar
-* Multiplikation af to matricer
-* Transponering af en matrix
-* Beregning af determinant
-* Beregning af invers matrix
+
+- Addition af matricer 
+- Subtraktion af matricer
+- Multiplikation af en matrix med en skalar
+- Multiplikation af to matricer
+- Transponering af en matrix
+- Beregning af determinant
+- Beregning af invers matrix
 
 # Addition af matricer
 Vi kan addere to matricer ved at addere de tilsvarende elementer i matricerne. Lad $X$ være en n x m matrix og $Y$ være en n x m matrix. Den generelle notation er:
@@ -202,13 +204,10 @@ $$X^T = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}^T = \begin{bmatrix}
 
 
 # Determinanten af en matrix: Hvad er det?
-
 Determinanten af en matrix er en operation på en kvadratisk matrix, som giver et tal. Determinanten af en matrix er en måde at beregne om en matrix er invertibel. 
 
 - Hvis determinanten af en matrix er forskellig fra nul, så er matricen invertibel. 
 - Hvis determinanten af en matrix er lig med nul, så er matricen ikke invertibel.
-
-
 
 # Determinanten af en matrix
 Vi kan beregne determinanten af en kvadratisk matrix ved at beregne summen af produkterne af elementerne i en række og deres såkaldte kofaktorer. Lad $X$ være en n x n matrix. Den generelle notation er:
@@ -219,7 +218,7 @@ Hvor $C_{1i}$ er kofaktoren for elementet $x_{1i}$:
 
 $$C_{1i} = (-1)^{1+i} M_{1i}$$
 
-## Determinanten af en matrix fortsat
+# Determinanten af en matrix fortsat
 
 Her er $M_{1i}$ minorværdien for elementet $x_{1i}$:
 
