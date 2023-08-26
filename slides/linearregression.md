@@ -1,3 +1,13 @@
+---
+title: Lineær regression i Python
+subtitle: Introduktion til Lineær Regression i Python
+author: Henrik Sterner
+fonttheme: "default"    
+lheader: "Intelligente Systemer"
+rheader: "Henrik Sterner (henrik.sterner@gmail.com)"
+---
+
+
 # Introduktion til Lineær Regression i Python
 ## Af Henrik Sterner (henrik.sterner@gmail.com)
 
@@ -72,50 +82,78 @@ $$a = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \ba
 $$b = \bar{y} - a\bar{x}$$
 
 # Udledning af formlerne for $a$ og $b$
-Vi kan udlede formlerne for $a$ og $b$ ved at differentiere summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til $a$ og $b$. Vi sætter de afledte lig med 0, og løser de to ligninger med hensyn til $a$ og $b$. Vi får en formel for $a$ og en formel for $b$. Vi indsætter $a$ og $b$ i modellen $f(x) = ax + b$. Vi har nu en lineær model, der passer til datasættet.
+Vi kan udlede formlerne for $a$ og $b$ ved at 
+- differentiere summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til $a$ og $b$. 
+- sætte de afledte lig med 0, og løs de to ligninger med hensyn til $a$ og $b$. 
 
-# Udled udtrykket for $a$
+Vi får en formel for $a$ og en formel for $b$, der indsættes i modellen $f(x) = ax + b$. Vi har nu en lineær model, der passer til datasættet.
+
+# Udledning af formlerne for $a$ og $b$
+Lad $(x1,y1), (x2,y2), ..., (xn,yn)$ være datapunkterne. 
+Residualet for det $i$'te datapunkt er afstanden fra datapunktet til modellen:
+
+$$r_i=y_i - (ax_i + b),$$
+hvor $y_i$ er den faktiske $y$-værdi for det $i$'te datapunkt, og $ax_i + b$ er den forudsagte $y$-værdi for det $i$'te datapunkt, mens $r_i$ kan betragtes som fejlen for det $i$'te datapunkt.
+
+Dernæst defineres summen af kvadraterne på afstandene fra datapunkterne til modellen:
+
+$$\sum_{i=1}^n (y_i - (ax_i + b))^2=r_i^2$$
+
+Vi skal nu minimere denne sum ved at differentiere den med hensyn til $a$ og $b$.
+
+
+# Udled udtrykkene for $a$ og $b$ - del 1
 Differentier summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til  $a$. Dvs. vi differentierer summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til  $a$:
 
 $$\frac{\partial}{\partial a} \sum_{i=1}^n (y_i - (ax_i + b))^2 = 0$$
 
-Hvilket giver:
-$$\sum_{i=1}^n 2(y_i - (ax_i + b))(-x_i) = 0$$
-$$\sum_{i=1}^n (y_i - (ax_i + b))(-x_i) = 0$$
-$$\sum_{i=1}^n (y_i - ax_i - b)(-x_i) = 0$$
-$$\sum_{i=1}^n -y_ix_i + ax_i^2 + bx_i = 0$$
+# Udled udtrykkene for $a$ og $b$ - del 2
+Før vi differentierer, kan vi gange summen ud:
 
+$$\sum_{i=1}^n (y_i - (ax_i + b))^2 = \sum_{i=1}^n (y_i^2 - 2y_i(ax_i + b) + (ax_i + b)^2)$$
+og tilsvarende med sidste led:
+$$\sum_{i=1}^n (y_i - (ax_i + b))^2 = \sum_{i=1}^n (y_i^2 - 2y_i(ax_i + b) + a^2x_i^2 + 2abx_i + b^2)$$
 
+# Udled udtrykkene for $a$ og $b$ - del 3
+Dernæst differentierer vi summen med hensyn til $a$:
 
+$$\sum_{i=1}^n (y_i^2 - 2y_i(ax_i + b) + a^2x_i^2 + 2abx_i + b^2) $$ 
+$$ = \sum_{i=1}^n (-2y_ix_i + 2ax_i^2 + 2bx_i)$$
 
-# Bestem udtrykket for $b$ - del I
-Differentier summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til  $b$:
+Sættes den afledte lig med 0, får vi:
+$$\sum_{i=1}^n (-2y_ix_i + 2ax_i^2 + 2bx_i) = 0$$
 
-$$\frac{\partial}{\partial b} \sum_{i=1}^n (y_i - (ax_i + b))^2 = 0$$
+# Udled udtrykkene for $a$ og $b$ - del 4
+Dernæst summes over hvert led:
+$$\sum_{i=1}^n -2y_ix_i + \sum_{i=1}^n 2ax_i^2 + \sum_{i=1}^n 2bx_i = 0$$
+Vi isolerer leddet med $a$:
+$$\sum_{i=1}^n 2ax_i^2 = -\sum_{i=1}^n -2y_ix_i - \sum_{i=1}^n 2bx_i$$
 
-Hvilket giver:
-$$\sum_{i=1}^n 2(y_i - (ax_i + b))(-1) = 0$$
-$$\sum_{i=1}^n (y_i - (ax_i + b))(-1) = 0$$
-$$\sum_{i=1}^n -y_i + ax_i + b = 0$$
-
-# Bestem udtrykket for $b$ - del II
-$$\sum_{i=1}^n -y_i + \sum_{i=1}^n ax_i + \sum_{i=1}^n b = 0$$
-$$\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i + b\sum_{i=1}^n 1 = 0$$
-$$\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i + nb = 0$$
-$$\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i = -nb$$
-$$b = \frac{\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i}{-n}$$
-
-# Opsummering af udtrykkene for $a$ og $b$
-Vi har nu udtrykkene for $a$ og $b$:
-
+# Udled udtrykkene for $a$ og $b$ - del 5
+og trækkker $a$ ud af summen:
+$$2a\sum_{i=1}^n x_i^2 = -\sum_{i=1}^n -2y_ix_i - \sum_{i=1}^n 2bx_i$$
+Til sidst isolerer vi $a$:
 $$a = \frac{\sum_{i=1}^n y_ix_i - b\sum_{i=1}^n x_i}{\sum_{i=1}^n x_i^2}$$
 
+# Udled udtrykkene for $a$ og $b$ - del 6
+På tilsvarende vis kan vi udlede udtrykket for $b$, og vi får:
+
 $$b = \frac{\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i}{-n}$$
 
+Ved at indføre gennemsnittet af $x$-værdierne $\bar{x}$ og gennemsnittet af $y$-værdierne $\bar{y}$, som er givet ved:
+
+$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n}, \bar{y} = \frac{\sum_{i=1}^n y_i}{n}$$
+
+# Udled udtrykkene for $a$ og $b$ - del 7
+Kan vi endelige skrive formlerne for $a$ og $b$ på følgende måde:
+
+$$a = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}$$
+
+$$b = \bar{y} - a\bar{x}$$
 
 
 # Funktioner der implementerer udtrykkene for $a$ og $b$
-Vi kan implementere udtrykkene for $a$ og $b$ i python:
+Vi kan let implementere udtrykkene for $a$ og $b$ i python:
 
 ```python
 def a(x, y):
