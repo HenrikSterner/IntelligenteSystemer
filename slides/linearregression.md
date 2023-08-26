@@ -60,52 +60,33 @@ Vi kan måle, hvor godt en lineær model passer til et datasæt, ved at måle, h
 Denne metode kaldes mindste kvadraters metode. 
 
 # Mindste kvadraters metode
-Mindste kvadraters metode går ud på at finde den lineære model, der gør, at summen af kvadraterne på afstandene fra datapunkterne til modellen er mindst mulig. Dvs. minimere:
+Mindste kvadraters metode går ud på at finde den lineære model, der gør, at summen af kvadraterne på afstandene fra datapunkterne til modellen er mindst mulig. Vi postulerer formlerne herunder.
+Lad gennemsnittet af $x$-værdierne være $\bar{x}$, og lad gennemsnittet af $y$-værdierne være $\bar{y}$. Vi kan udregne $\bar{x}$ og $\bar{y}$ således:
 
-$$\sum_{i=1}^n (y_i - f(x_i))^2$$
+$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n}, \bar{y} = \frac{\sum_{i=1}^n y_i}{n}$$
 
-Erstattes $f(x_i)$ med $ax_i + b$, får vi:
+Da er 
 
-$$\sum_{i=1}^n (y_i - (ax_i + b))^2$$
+$$a = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}$$
 
-Hvordan finder vi $a$ og $b$, der gør, at summen af kvadraterne på afstandene fra datapunkterne til modellen er mindst mulig?
+$$b = \bar{y} - a\bar{x}$$
 
-# Lad os finde $a$ og $b$ ved at differentiere
-- Vi differentierer summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til $a$ og $b$.
-- Vi sætter de afledte lig med 0.
-- Vi løser de to ligninger med hensyn til $a$ og $b$.
-- Vi får en formel for $a$ og en formel for $b$.
-- Vi indsætter $a$ og $b$ i modellen $f(x) = ax + b$.
-- Vi har nu en lineær model, der passer til datasættet.
+# Udledning af formlerne for $a$ og $b$
+Vi kan udlede formlerne for $a$ og $b$ ved at differentiere summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til $a$ og $b$. Vi sætter de afledte lig med 0, og løser de to ligninger med hensyn til $a$ og $b$. Vi får en formel for $a$ og en formel for $b$. Vi indsætter $a$ og $b$ i modellen $f(x) = ax + b$. Vi har nu en lineær model, der passer til datasættet.
 
-
-# Bestem udtrykket for $a$ - del I
-
-Differentier summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til $a$ og $b$:
+# Udled udtrykket for $a$
+Differentier summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til  $a$. Dvs. vi differentierer summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til  $a$:
 
 $$\frac{\partial}{\partial a} \sum_{i=1}^n (y_i - (ax_i + b))^2 = 0$$
 
 Hvilket giver:
 $$\sum_{i=1}^n 2(y_i - (ax_i + b))(-x_i) = 0$$
-Her har vi brugt kædereglen:
-$$\frac{\partial}{\partial a} (y_i - (ax_i + b))^2 = 2(y_i - (ax_i + b))\frac{\partial}{\partial a} (y_i - (ax_i + b))$$
-
-# Bestem udtrykket for $a$ - del II
-Vi har nu en ligning med én ubekendt, $a$. Vi kan løse den med hensyn til $a$:
-
-$$\sum_{i=1}^n 2(y_i - (ax_i + b))(-x_i) = 0$$
 $$\sum_{i=1}^n (y_i - (ax_i + b))(-x_i) = 0$$
 $$\sum_{i=1}^n (y_i - ax_i - b)(-x_i) = 0$$
 $$\sum_{i=1}^n -y_ix_i + ax_i^2 + bx_i = 0$$
-$$\sum_{i=1}^n -y_ix_i + \sum_{i=1}^n ax_i^2 + \sum_{i=1}^n bx_i = 0$$
-$$\sum_{i=1}^n -y_ix_i + a\sum_{i=1}^n x_i^2 + b\sum_{i=1}^n x_i = 0$$
 
-# Bestem udtrykket for $a$ - del III
-Vi har nu en ligning med én ubekendt, $a$. Vi kan løse den med hensyn til $a$:
 
-$$\sum_{i=1}^n -y_ix_i + a\sum_{i=1}^n x_i^2 + b\sum_{i=1}^n x_i = 0$$
-$$a\sum_{i=1}^n x_i^2 = \sum_{i=1}^n y_ix_i - b\sum_{i=1}^n x_i$$
-$$a = \frac{\sum_{i=1}^n y_ix_i - b\sum_{i=1}^n x_i}{\sum_{i=1}^n x_i^2}$$
+
 
 # Bestem udtrykket for $b$ - del I
 Differentier summen af kvadraterne på afstandene fra datapunkterne til modellen med hensyn til  $b$:
@@ -131,11 +112,7 @@ $$a = \frac{\sum_{i=1}^n y_ix_i - b\sum_{i=1}^n x_i}{\sum_{i=1}^n x_i^2}$$
 
 $$b = \frac{\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i}{-n}$$
 
-Ved substituering får vi de endelige udtryk for $a$ og $b$:
 
-$$a = \frac{\sum_{i=1}^n y_ix_i - \frac{\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i}{-n}\sum_{i=1}^n x_i}{\sum_{i=1}^n x_i^2}$$
-
-$$b = \frac{\sum_{i=1}^n -y_i + a\sum_{i=1}^n x_i}{-n}$$
 
 # Funktioner der implementerer udtrykkene for $a$ og $b$
 Vi kan implementere udtrykkene for $a$ og $b$ i python:
