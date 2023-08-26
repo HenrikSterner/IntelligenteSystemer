@@ -248,3 +248,294 @@ print(y)
     tensor([[1, 2, 3]])
     ```
 
+# Metoden `permute`
+Metoden `permute` kan bruges til at ændre rækkefølgen af dimensioner i en tensor.
+
+```python
+import torch
+
+x = torch.tensor([[[1, 2, 3], [4, 5, 6]]])
+y = x.permute(2, 0, 1)
+print(y)
+```
+    
+    ```
+    tensor([[[1, 4]],
+    
+            [[2, 5]],
+    
+            [[3, 6]]])
+    ```
+
+# Metoden `transpose`
+Metoden `transpose` kan bruges til at bytte rækkefølgen af to dimensioner i en tensor.
+
+```python
+import torch
+
+x = torch.tensor([[[1, 2, 3], [4, 5, 6]]])
+
+y = x.transpose(0, 1)
+print(y)
+```
+    
+    ```
+    tensor([[[1, 2, 3]],
+    
+            [[4, 5, 6]]])
+    ```
+
+# Metoden `view`
+Metoden `view` kan bruges til at ændre størrelsen af en tensor. Den nye størrelse skal være kompatibel med den gamle størrelse. Det vil sige, at antallet af elementer skal være det samme.
+
+```python
+import torch
+
+x = torch.tensor([[1, 2, 3], [4, 5, 6]])
+y = x.view(3, 2)
+print(y)
+```
+    
+    ```
+    tensor([[1, 2],
+            [3, 4],
+            [5, 6]])
+    ```
+
+# Metoden `item`
+Metoden `item` kan bruges til at få værdien af en tensor, der kun indeholder ét element.
+
+```python
+import torch
+
+x = torch.tensor([1])
+y = x.item()
+print(y)
+```
+    
+    ```
+    1
+    ```
+
+# Metoden `tolist`
+Metoden `tolist` kan bruges til at konvertere en tensor til en liste.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.tolist()
+print(y)
+```
+    
+    ```
+    [1, 2, 3]
+    ```
+
+# Metoden `numpy`
+Metoden `numpy` kan bruges til at konvertere en tensor til en NumPy-array.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.numpy()
+print(y)
+```
+    
+    ```
+    [1 2 3]
+    ```
+
+# Metoden `to`
+Metoden `to` kan bruges til at flytte en tensor til en anden enhed. En tensor kan flyttes til CPU'en eller til GPU'en.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.to('cuda')
+print(y)
+print(y.device)
+```
+    
+    ```
+    tensor([1, 2, 3], device='cuda:0')
+    cuda:0
+    ```
+
+# Metoden `cuda`
+Metoden `cuda` kan bruges til at flytte en tensor til GPU'en.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.cuda()
+print(y)
+print(y.device)
+```
+    
+    ```
+    tensor([1, 2, 3], device='cuda:0')
+    cuda:0
+    ```
+
+# Metoden `cpu`
+Metoden `cpu` kan bruges til at flytte en tensor til CPU'en.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.cuda()
+z = y.cpu()
+print(z)
+
+print(z.device)
+```
+    
+    ```
+    tensor([1, 2, 3])
+    cpu
+    ```
+
+# Metoden `float`
+Metoden `float` kan bruges til at konvertere en tensor til typen `torch.float32`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.float()
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([1., 2., 3.])
+    torch.float32
+    ```
+
+# Metoden `double`
+Metoden `double` kan bruges til at konvertere en tensor til typen `torch.float64`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.double()
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([1., 2., 3.], dtype=torch.float64)
+    torch.float64
+    ```
+
+# Metoden `long`
+Metoden `long` kan bruges til at konvertere en tensor til typen `torch.int64`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.long()
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([1, 2, 3])
+    torch.int64
+    ```
+
+# Metoden `half`
+Metoden `half` kan bruges til at konvertere en tensor til typen `torch.float16`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.half()
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([1., 2., 3.], dtype=torch.float16)
+    torch.float16
+    ```
+
+# Metoden `int`
+Metoden `int` kan bruges til at konvertere en tensor til typen `torch.int32`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.int()
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([1, 2, 3], dtype=torch.int32)
+    torch.int32
+    ```
+
+# Metoden `short`
+Metoden `short` kan bruges til at konvertere en tensor til typen `torch.int16`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.short()
+print(y)
+
+print(y.dtype)
+```
+    
+    ```
+    tensor([1, 2, 3], dtype=torch.int16)
+    torch.int16
+    ```
+
+# Metoden `char`
+Metoden `char` kan bruges til at konvertere en tensor til typen `torch.int8`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.char()
+print(y)
+
+print(y.dtype)
+```
+    
+    ```
+    tensor([1, 2, 3], dtype=torch.int8)
+    torch.int8
+    ```
+
+# Metoden `byte`
+Metoden `byte` kan bruges til at konvertere en tensor til typen `torch.uint8`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.byte()
+
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([1, 2, 3], dtype=torch.uint8)
+    torch.uint8
+    ```
+
