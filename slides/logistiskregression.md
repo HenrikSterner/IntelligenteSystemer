@@ -118,6 +118,12 @@ Vi ser, at den estimerede sandsynlighed for at overleve er:
 
 Her er $x_1$ køn, $x_2$ alder, $x_3$ klasse, $x_4$ søskende/ægtefælle, $x_5$ forældre/børn, $x_6$ pris og $x_7$ havne.
 
+# Vil man vide hvorledes logistisk regression virker - så kig med videre :-)
+I de følgende slides vil vi se på hvordan logistisk regression virker både fra et matematisk og et programmeringsmæssigt perspektiv. 
+
+Det er ikke et krav for at kunne bruge den, men det er altid godt at vide hvordan tingene virker fra bunden :-).
+
+
 # Matematisk baggrund for logistisk regression
 - Vi kan skrive logistisk regression som:
 - $$y = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n)}}$$
@@ -230,24 +236,140 @@ Kort fortalt:
 - Beregn sandsynligheden for at en given observation tilhører en given klasse. Dvs.:
 $$y = \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}$$ 
 
-# Matematisk baggrund for Newton-Raphson metoden: Den afledede
+# Newton-Raphson metoden: Den første afledede
 Beregn den afledede af logistisk regression i forhold til parametrene $\beta_0, \beta_1, \beta_2, ..., \beta_n$. Dvs.
 $$\frac{\partial y}{\partial \beta_0} = \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}} - \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^2}$$
 $$...$$
 $$\frac{\partial y}{\partial \beta_n} = \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} x_n}{1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}} - \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} x_n}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^2}$$
 
-# Matematisk baggrund for Newton-Raphson metoden: Den anden afledede
+# Newton-Raphson metoden: Den anden afledede
 Beregn den anden afledede af logistisk regression i forhold til parametrene $\beta_0, \beta_1, \beta_2, ..., \beta_n$. Dvs.
-$$\frac{\partial^2 y}{\partial \beta_0^2}= \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^2} - \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^3}$$
+$$\frac{\partial^2 y}{\partial \beta_0^2}= \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^2} $$ 
+$$- \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^3}$$
+$$...$$
+$$\frac{\partial^2 y}{\partial \beta_n^2}= \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} x_n^2}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^2}$$ 
+$$- \frac{e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n} x_n^2}{\left(1 + e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n}\right)^3}$$
 
+# Newton-Raphson metoden: Opdater parametre
+Vi opdaterer nu parametrene $\beta_0, \beta_1, \beta_2, ..., \beta_n$ i retningen af den afledede divideret med den anden afledede:
+$$\beta_0 = \beta_0 - \frac{\frac{\partial y}{\partial \beta_0}}{\frac{\partial^2 y}{\partial \beta_0^2}}$$
+$$\beta_1 = \beta_1 - \frac{\frac{\partial y}{\partial \beta_1}}{\frac{\partial^2 y}{\partial \beta_1^2}}$$
+$$...$$
+$$\beta_n = \beta_n - \frac{\frac{\partial y}{\partial \beta_n}}{\frac{\partial^2 y}{\partial \beta_n^2}}$$
 
+# Newton-Raphson metoden: Gentag processen
+Vi gentager nu processen, indtil vi er tæt nok på minimumspunktet.
+Dvs. vi gentager processen, indtil den afledede er tæt på 0:
+$$\frac{\partial y}{\partial \beta_0} \approx 0$$
+$$\frac{\partial y}{\partial \beta_1} \approx 0$$
+$$\frac{\partial y}{\partial \beta_2} \approx 0$$
+$$...$$
+$$\frac{\partial y}{\partial \beta_n} \approx 0$$
 
-# Sigmoid-funktionen
-- Sigmoid-funktionen er defineret som:
-- $$\frac{1}{1 + e^{-x}}$$
+# Logistisk regression i Python fra bunden
+- Vi kan nu implementere logistisk regression i Python fra bunden.
+- Vi starter med at importere numpy:
+```python
+import numpy as np
+```
+
+# Logistisk regression i Python fra bunden
+- Vi kan nu definere en funktion, som beregner sandsynligheden for at en given observation tilhører en given klasse:
+```python
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+```
+Denne funktion kaldes for sigmoid-funktionen og er meget vigtig i logistisk regression:
+$$\frac{1}{1 + e^{-x}}$$
 - Her er $x$ en vilkårlig værdi.
 - Sigmoid-funktionen er en special case af logit-funktionen, hvor $y$ er en vilkårlig værdi.
-- Sigmoid-funktionen er en såkaldt aktiveringsfunktion, som bruges i neurale netværk.
+- Sigmoid-funktionen spiller også en central rolle i kunstige neurale netværk, som aktiveringsfunktion.
+
+# Logistisk regression i Python fra bunden
+Efter at have defineret sigmoid-funktionen kan vi nu definere en funktion, som beregner sandsynligheden for at en given observation tilhører en given klasse:
+```python
+def predict(X, beta):
+    return sigmoid(np.dot(X, beta))
+```
+- Her er $X$ en matrix med observationer og variable.
+- beta er en vektor med parametre.
+
+# Logistisk regression i Python fra bunden
+Vi kan nu definere en funktion, som beregner den afledede af logistisk regression i forhold til parametrene $\beta_0, \beta_1, \beta_2, ..., \beta_n$:
+```python
+def gradient(X, y, beta):
+    return np.dot(X.T, y - predict(X, beta))
+```
+- Her er $X$ en matrix med observationer og variable.
+- $y$ er en vektor med sande værdier.
+- beta er en vektor med parametre.
+
+# Logistisk regression i Python fra bunden
+Vi kan nu definere en funktion, som beregner den anden afledede af logistisk regression i forhold til parametrene $\beta_0, \beta_1, \beta_2, ..., \beta_n$:
+```python
+def hessian(X, beta):
+    p = predict(X, beta)
+    return np.dot(X.T, X * p * (1 - p))
+```
+- Her er $X$ en matrix med observationer og variable.
+- beta er en vektor med parametre.
+Vi får en matrix og ikke en vektor, da vi beregner den anden afledede i forhold til alle parametre samtidig. Matricen kaldes for Hessisk matricen opkaldt efter den tyske matematiker Ludwig Otto Hesse.
+
+# Logistisk regression i Python fra bunden
+Vi kan nu definere en funktion, som bestemmer parametrene $\beta_0, \beta_1, \beta_2, ..., \beta_n$ i logistisk regression:
+```python
+def fit(X, y, iterations=100):
+    beta = np.zeros(X.shape[1])
+    for i in range(iterations):
+        beta -= np.linalg.solve(hessian(X, beta), gradient(X, y, beta))
+    return beta
+```
+- Her er $X$ en matrix med observationer og variable.
+- $y$ er en vektor med sande værdier.
+- iterations er antallet af gange, som vi skal gentage processen. Default er 100.
+- beta er en vektor med parametre.
+
+# Afprøvning af logistisk regression i Python fra bunden
+- Vi kan nu afprøve logistisk regression i Python fra bunden.
+- Vi starter med at indlæse data:
+```python
+import numpy as np
+
+data = np.loadtxt('titanic.csv', delimiter=',', skiprows=1)
+```
+
+# Afprøvning af logistisk regression i Python fra bunden
+- Vi kan nu opdele data i trænings- og testdata:
+```python
+from sklearn.model_selection import train_test_split
+
+X = data[:,1:]
+y = data[:,0]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+```
+
+# Afprøvning af logistisk regression i Python fra bunden
+- Vi kan nu træne en logistisk regression model:
+```python
+beta = fit(X_train, y_train)
+```
+
+- Vi kan nu beregne sandsynligheden for at en given observation tilhører en given klasse:
+```python
+y_pred = predict(X_test, beta)
+```
+
+# Afprøvning af logistisk regression i Python fra bunden
+- Vi kan nu beregne nøjagtigheden af modellen:
+```python
+from sklearn.metrics import accuracy_score
+
+print(accuracy_score(y_test, y_pred.round()))
+```
+```python
+0.8100558659217877
+```
+Her er nøjagtigheden 81%.
 
 
 
