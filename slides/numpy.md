@@ -22,12 +22,18 @@ pandoc -o numpy.docx numpy.md
 ```
 
 # Hvorfor bruge NumPy?
-* NumPy er meget hurtigere end at bruge Python-lister til matematiske operationer.
-* Det er også mere bekvemt og lettere at læse.
+* NumPy er meget hurtigere end at bruge Python-lister til matematiske operationer. Det skyldes at NumPy forventer, at alle elementer i en liste har samme datatype, så den behøver ikke at tjekke typen af hvert element.
+* Desuden lagres NumPy-arrays i hukommelsen som en sammenhængende blok, så det er hurtigere at tilgå elementer i en NumPy-array end i en Python-liste.
+* I praksis er NumPy meget hurtigere end Python-lister, når vi arbejder med store datamængder (faktor 5 til 100)
 * NumPy er et standardbibliotek i Python, så det er tilgængeligt i stort set alle Python-distributioner.
 
 # Installation af Numpy i Google Colab
 Numpy er en del af Google Colab, så hvis du bruger Google Colab, så har du også Numpy. Hvis du ikke bruger Google Colab, så kan du installere Numpy ved at skrive følgende i en terminal:
+
+```bash
+pip install numpy
+```
+
 
 
 # Installation af Numpy via Anaconda
@@ -39,6 +45,54 @@ Numpy importeres på følgende måde:
 ```python
 import numpy as np
 ```
+# Teste om Numpy er installeret
+-   Åbn en terminal
+-   Skriv python
+-   Skriv import numpy as np
+-   Skriv print(np.version.version)
+-   Skriv exit()
+-   Hvis du får en versionsnummer, så er Numpy installeret korrekt
+-   Hvis du får en fejlmeddelelse, så er Numpy ikke installeret korrekt
+-   Hvis du får en fejlmeddelelse, så prøv at geninstallere Numpy
+
+# Teste hastigheden af Numpy arrays ...
+Vi kan teste hastigheden af Numpy arrays vs. Python lister ved at udføre følgende test:
+```python
+import numpy as np
+import time
+
+# Test hastigheden af Numpy arrays
+start = time.time()
+a = np.arange(1000000)
+b = np.arange(1000000)
+c = a + b
+end = time.time()
+print(end - start)
+```
+
+# Test hastigheden af Python lister
+Her kan vi teste hastigheden af Python lister:
+```python
+start = time.time()
+a = list(range(1000000))
+b = list(range(1000000))
+c = []
+for i in range(len(a)):
+    c.append(a[i] + b[i])
+end = time.time()
+print(end - start)
+```
+
+# Resultater af test
+Resultater prøvet lokalt på min bærbare computer:
+
+```bash
+0.00498652458190918
+0.15899991989135742
+```
+
+Dvs. Numpy arrays er ca. 37 gange hurtigere end Python lister i dette eksempel. 
+
 
 # Arrays i numpy
 Et array er en samling af elementer, som har samme datatype. Et array kan have en eller flere dimensioner. Et array med en dimension kaldes en vektor, et array med to dimensioner kaldes en matrix.
@@ -316,7 +370,6 @@ print(v + np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])) # [ 8  6  5 10 13 15  8 11 14]
 ```
 
 # Vigtige funktioner på vektorer i numpy - del I
-Numpy tilbyder en række funktioner til matematiske, statistiske og logiske operationer på vektorer. Herunder en liste over de vigtigste funktioner:
 - np.sum: summerer alle elementer i en vektor
 - np.mean: beregner gennemsnittet af alle elementer i en vektor
 - np.std: beregner standardafvigelsen af alle elementer i en vektor
@@ -454,7 +507,6 @@ print(A + np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) # [[ 2  4  6] [ 8 10 12] 
 ```
 
 # Vigtige funktioner på matricer i numpy - del I
-Numpy tilbyder en række funktioner til matematiske, statistiske og logiske operationer på matricer. Herunder en liste over de vigtigste funktioner:
 - np.sum: summerer alle elementer i en matrix
 - np.mean: beregner gennemsnittet af alle elementer i en matrix
 - np.std: beregner standardafvigelsen af alle elementer i en matrix
@@ -630,7 +682,7 @@ print(np.reshape(B, (9, 1))) # [[1] [2] [3] [4] [5] [6] [7] [8] [9]]
 C = np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]]])
 print(np.reshape(C, (9, 1))) # [[1] [2] [3] [4] [5] [6] [7] [8] [9]]
 ```
-```
+
 
 # np.flatten på matricer
 np.flatten kan bruges til at ændre formen på en matrix til en vektor:
@@ -704,7 +756,6 @@ print(np.dot(2, A)) # [[ 2  4  6] [ 8 10 12]]
 ```
 
 # Operationer på matricer
-Numpy understøtter en lang række andre operationer på matricer. Herunder en liste over de vigtigste operationer:
 - Addition: `+`
 - Subtraktion: `-`
 - Multiplikation: `*`
