@@ -167,6 +167,92 @@ $$ = \lim_{h \rightarrow 0} \frac{2x_0h + h^2}{h} = \lim_{h \rightarrow 0} 2x_0 
 
 Tilsvarende udregnes den partielle differentialkvotient af $f$ i $(x_0,y_0,z_0) \in \mathbb{R}^3$ med hensyn til $y$ og $z$.
 
+# Gradienten
+Lad $f: X \rightarrow Y$ være en funktion af to variable, hvor $X \subseteq \mathbb{R}^2$ og $Y \subseteq \mathbb{R}$. Så er gradienten af $f$ i $(x_0,y_0) \in X$ givet ved:
+$$\nabla f(x_0,y_0) = \left(\frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0)\right)$$
+
+# Eksempel: Udregning af gradienten
+Lad $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ være givet ved $f(x,y) = x^2 + y^2$. Her er $X = \mathbb{R}^2$ og $Y = \mathbb{R}$. Funktionen er differentiable i alle punkter i $\mathbb{R}^2$. Gradienten af $f$ i $(x_0,y_0) \in \mathbb{R}^2$ er givet ved:
+$$\nabla f(x_0,y_0) = \left(\frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0)\right)$$
+$$ = \left(2x_0, 2y_0\right)$$
+
+# Betydningen af gradienten
+Gradienten fortæller os, hvordan funktionen ændrer sig i et givet punkt.
+
+Hvis gradienten er positiv, så stiger funktionen i punktet.
+
+Hvis gradienten er negativ, så falder funktionen i punktet.
+
+Hvis gradienten er nul, så er funktionen stationær i punktet.
+
+# Eksempel: Gradienten fortæller om funktionen stiger eller falder
+Lad $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ være givet ved $f(x,y) = x^2 + y^2$. Her er $X = \mathbb{R}^2$ og $Y = \mathbb{R}$. Funktionen er differentiable i alle punkter i $\mathbb{R}^2$. Gradienten af $f$ i $(x_0,y_0) \in \mathbb{R}^2$ er givet ved:
+
+$$\nabla f(x_0,y_0) = \left(\frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0)\right)$$
+
+$$ = \left(2x_0, 2y_0\right)$$
+
+Hvis $x_0 = 1$ og $y_0 = 1$, så er gradienten $\nabla f(1,1) = (2,2)$. Da begge komponenter er positive, så stiger funktionen i punktet $(1,1)$.
+
+Hvis $x_0 = -1$ og $y_0 = -1$, så er gradienten $\nabla f(-1,-1) = (-2,-2)$. Da begge komponenter er negative, så falder funktionen i punktet $(-1,-1)$.
+
+Hvis $x_0 = 0$ og $y_0 = 0$, så er gradienten $\nabla f(0,0) = (0,0)$. Da begge komponenter er nul, så er funktionen stationær i punktet $(0,0)$.
+
+
+
+# Gradienten og gradient descent
+Gradienten er en vigtig størrelse i maskinlæring og intelligente systemer.
+
+Gradient descent er en algoritme, der bruges til at finde minimumspunkter for en funktion.
+
+# Gradient descent
+Lad $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ være en differentiable funktion. Så er gradient descent algoritmen givet ved:
+$$x_{n+1} = x_n - \alpha \cdot \nabla f(x_n)$$
+hvor $x_0$ er et startpunkt, $\alpha$ er en konstant og $n$ er et heltal.
+
+# Eksempel: Gradient descent
+Lad $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ være givet ved $f(x,y) = x^2 + y^2$. Her er $X = \mathbb{R}^2$ og $Y = \mathbb{R}$. Funktionen er differentiable i alle punkter i $\mathbb{R}^2$. Gradient descent algoritmen er givet ved:
+$$x_{n+1} = x_n - \alpha \cdot \nabla f(x_n)$$
+hvor $x_0$ er et startpunkt, $\alpha$ er en konstant og $n$ er et heltal.
+
+# Eksempel: Gradient descent - generering af sekvens af punkter
+Hvis vi vælger $x_0 = (1,1)$ og $\alpha = 0.1$, så får vi følgende sekvens af punkter:
+$$x_0 = (1,1)$$
+$$x_1 = (1,1) - 0.1 \cdot \nabla f(1,1) = (1,1) - 0.1 \cdot (2,2) = (0.8,0.8)$$
+
+$$x_2 = (0.8,0.8) - 0.1 \cdot \nabla f(0.8,0.8) = (0.8,0.8) - 0.1 \cdot (1.6,1.6) = (0.64,0.64)$$
+
+$$x_3 = (0.64,0.64) - 0.1 \cdot \nabla f(0.64,0.64) = (0.64,0.64) - 0.1 \cdot (1.28,1.28) = (0.512,0.512)$$
+
+$$\dots$$
+
+# Eksempel: Gradient descent - generering af sekvens af punkter
+Vi kan også vælge $x_0 = (-1,-1)$ og $\alpha = 0.1$, så får vi følgende sekvens af punkter:
+$$x_0 = (-1,-1)$$
+$$x_1 = (-1,-1) - 0.1 \cdot \nabla f(-1,-1) = (-1,-1) - 0.1 \cdot (-2,-2) = (-0.8,-0.8)$$
+$$x_2 = (-0.8,-0.8) - 0.1 \cdot \nabla f(-0.8,-0.8) = (-0.8,-0.8) - 0.1 \cdot (-1.6,-1.6) = (-0.64,-0.64)$$
+$$x_3 = (-0.64,-0.64) - 0.1 \cdot \nabla f(-0.64,-0.64) = (-0.64,-0.64) - 0.1 \cdot (-1.28,-1.28) = (-0.512,-0.512)$$
+
+$$\dots$$
+
+# Eksempel: Gradient descent - konklusion
+Vi kan se, at gradient descent algoritmen konvergerer mod minimumspunktet $(0,0)$ uanset hvilket startpunkt vi vælger.
+
+Derudover bemærker vi, at hvis vi vælger et startpunkt tæt på minimumspunktet, så konvergerer algoritmen hurtigere.
+
+Det er derfor vigtigt at vælge et godt startpunkt, når vi bruger gradient descent algoritmen.
+
+# Valg af startpunkt
+- Vælg et startpunkt tæt på minimumspunktet.
+- Vælg et startpunkt, hvor gradienten ikke er nul.
+- Vælg et startpunkt, hvor gradienten ikke er parallel med en akse.
+- Vælg et startpunkt, hvor gradienten ikke er parallel med en linje.
+- Vælg et startpunkt, hvor gradienten ikke er parallel med en plan.
+ 
+Her betragte gradienten som en vektor, der peger i retningen af størst stigning af funktionen.
+
+
+
 
 
 
