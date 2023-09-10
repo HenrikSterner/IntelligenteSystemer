@@ -1,10 +1,29 @@
-# Introduktion til sandsynlighedsregning i Python
+# Introduktion til grundlæggende sandsynlighedsregning i Python
 ## Af Henrik Sterner (henrik.sterner@gmail.com)
 
 Sandsynlighedsregning er en måde at beskrive usikkerhed på, som er matematisk
 veldefineret. Sandsynlighedsregning spiller en central rolle i mange aspekter af maskinlæring, og derfor er det vigtigt at have en grundlæggende forståelse af sandsynlighedsregning.
 
 Vi viser hvorledes sandsynlighedsregning kan implementeres i Python ved hjælp af biblioteket `numpy`.
+
+
+# Om brugen af disse slides
+- Disse slides forsøger at eksemplifere en lang række af de vigtige begreber i sandsynlighedsregning
+- De må på ingen måde kopieres uden tilladelse fra Henrik Sterner
+- De er lavet i markdown og kan derfor nemt konverteres til andre formater
+- Ved brug af Visual Studio Code kan de konverteres til HTML, PDF, PowerPoint, Word, LaTeX og mange andre formater 
+- Slides er tilgængelige på github.com/henriksterner/IntelligenteSystemer/
+
+# Konvertere slides til andre formater
+
+- Fra markdown til pdf ved brug af pandoc: 
+```bash
+pandoc -t beamer -V theme:metropolis -o sandsynlighedsteori.pdf sandsynlighedsteori.md
+```
+- Fra markdown til word ved brug af pandoc: 
+```bash
+pandoc -o sandsynlighedsteori.docx sandsynlighedsteori.md
+```
 
 # Sandsynlighedsregning - centrale begreber
 - Udfaldsrum
@@ -15,17 +34,7 @@ Vi viser hvorledes sandsynlighedsregning kan implementeres i Python ved hjælp a
 - Betinget sandsynlighed
 - Uafhængighed
 - Bayes regel
-- Forventningsværdi
-- Varians
-- Kovarians
-- Korrelation
-- Markov uligheden
-- Chebyshevs ulighed
-- Lov om den itererede forventning
-- Lov om den totale sandsynlighed
-- Lov om den itererede sandsynlighed
-- Centrale grænseværdisætning
-- Lov om store tal
+- Naive Bayes algoritme
 
 # Udfaldsrum og hændelser
 Et udaldsrum er en mængde af mulige udfald. Et udfald er en mulig hændelse.
