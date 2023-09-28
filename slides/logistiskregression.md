@@ -1,13 +1,3 @@
----
-title: Logistisk regression i Python
-subtitle: Introduktion til Logistisk Regression i Python
-author: Henrik Sterner
-fonttheme: "default"    
-lheader: "Intelligente Systemer"
-rheader: "Henrik Sterner (henrik.sterner@gmail.com)"
----
-
-
 # Introduktion til Logistisk Regression i Python
 ## Af Henrik Sterner (henrik.sterner@gmail.com)
 I det følgende introduceres logistisk regression og hvordan vi kan bruge det i Python. 

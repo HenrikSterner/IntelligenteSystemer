@@ -76,10 +76,10 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 8 |PD:5(kmeans),slides | [K-means algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/kmeans.ipynb) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
 9.1 |slides | [Lineær algebra](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/algebra.pdf) | |
 9.2 |slides | [Deskriptiv statistik](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/deskriptiv.pdf) | |
-9.3 |slides | [Sandsynlighedsregning](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/deskriptiv.pdf) | |
+9.3 |slides | [Sandsynlighedsregning](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | |
 10 |PD:5(Linear regression..) | [Lineær regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/linearregression.md) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 11 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
-12 |PD:5(Naive Bayes..)  | Projekt Naiv Bayes-algoritmen | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
+12 |PD:5(Naive Bayes..)  | [Naiv Bayes-algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
 13-14 | | Logistisk regression |  |
 15 | | Perceptroner |  |
 16 | | Lineært Neurale netværk |  |
