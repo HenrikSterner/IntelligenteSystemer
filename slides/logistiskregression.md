@@ -2,8 +2,6 @@
 ## Af Henrik Sterner (henrik.sterner@gmail.com)
 I det følgende introduceres logistisk regression og hvordan vi kan bruge det i Python. 
 
-
-
 # Hvad er logistisk regression?
 Logistisk regression er en metode til at forudsige sandsynligheden for at en given observation tilhører en given klasse.
 Eksempler er mange:

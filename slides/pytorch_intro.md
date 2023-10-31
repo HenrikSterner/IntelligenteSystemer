@@ -539,3 +539,79 @@ print(y.dtype)
     torch.uint8
     ```
 
+# Metoden `bool`
+Metoden `bool` kan bruges til at konvertere en tensor til typen `torch.bool`.
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+y = x.bool()
+print(y)
+print(y.dtype)
+```
+    
+    ```
+    tensor([True, True, True])
+    torch.bool
+    ```
+
+# Metoden `abs`
+Metoden `abs` kan bruges til at tage absolutværdien af en tensor.
+
+```python
+import torch
+
+x = torch.tensor([-1, -2, -3])
+y = x.abs()
+print(y)
+```
+    
+    ```
+    tensor([1, 2, 3])
+    ```
+
+# Øvelser med tensors
+
+1. Opret en tensor med tilfældige værdier med `torch.rand`.
+2. Opret en tensor med nulværdier med `torch.zeros`.
+3. Opret en tensor med en bestemt datatype med `torch.zeros`.
+4. Opret en tensor på GPU'en med `torch.zeros`.
+5. Opret en tensor fra en liste med `torch.tensor`.
+6. Opret en tensor fra en NumPy-array med `torch.from_numpy`.
+7. Opret en tensor fra en anden tensor med `torch.tensor`.
+8. Opret en tensor med tilfældige værdier med `torch.rand`.
+9. Opret en tensor med nulværdier med `torch.zeros`.
+10. Opret en tensor med en bestemt datatype med `torch.zeros`.
+11. Opret en tensor på GPU'en med `torch.zeros`.
+12. Opret en tensor fra en liste med `torch.tensor`.
+13. Opret en tensor fra en NumPy-array med `torch.from_numpy`.
+14. Opret en tensor fra en anden tensor med `torch.tensor`.
+15. Opret en tensor med tilfældige værdier med `torch.rand`.
+16. Opret en tensor med nulværdier med `torch.zeros`.   
+17. Lav to tensors med tilfældige værdier med `torch.rand`. Læg dem sammen med `+`.
+18. Lav to tensors med tilfældige værdier med `torch.rand`. Træk dem fra med `-`.
+19. Lav to tensors med tilfældige værdier med `torch.rand`. Gange dem med `*`.
+20. Lav to tensors med tilfældige værdier med `torch.rand`. Divider dem med `/`.
+21. Lav en tensor med tilfældige værdier med `torch.rand`. Tag den absolutte værdi med `abs`.
+22. Lav en tensor med tilfældige værdier med `torch.rand`. Tag den absolutte værdi med `abs_`.
+23. Lav en tensor med tilfældige værdier med `torch.rand`. Tag den absolutte værdi med `torch.abs`.
+24. Lav en tensor med tilfældige værdier med `torch.rand`. Find den største værdi med `max`.
+25. Lav en tensor med tilfældige værdier med `torch.rand`. Find den mindste værdi med `min`.
+26. Lav en tensor med tilfældige værdier med `torch.rand`. Find gennemsnittet med `mean`.
+27. Lav en tensor med tilfældige værdier med `torch.rand`. Find summen med `sum`.
+28. Lav en tensor med tilfældige værdier med `torch.rand`. Find produktet med `prod`.
+29. Lav en tensor med tilfældige værdier med `torch.rand`. Find normen med `norm`.
+30. Lav en tensor med tilfældige værdier med `torch.rand`. Find cosinus med `cos`.
+31. Lav en tensor med tilfældige værdier med `torch.rand`. Find sinus med `sin`.
+32. Lav en tensor med tilfældige værdier med `torch.rand`. Find tangens med `tan`.
+33. Lav en tensor med tilfældige værdier med `torch.rand`. Find eksponentialfunktionen med `exp`.
+34. Lav en tensor med tilfældige værdier med `torch.rand`. Find logaritmen med `log`.
+35. Lav en tensor med tilfældige værdier med `torch.rand`. Find kvadratroden med `sqrt`.
+
+
+# Øvelser med billeder
+36. Indlæs et billede med `torchvision.io.read_image`. Konverter billedet til en tensor med `torchvision.transforms.functional.to_tensor`.
+37. Indlæs et billede med `torchvision.io.read_image`. Konverter billedet til en tensor med `torchvision.transforms.functional.to_tensor`. Konverter billedet til en NumPy-array med `torchvision.transforms.functional.to_pil_image`.
+38. Indlæs et billede med `torchvision.io.read_image`. Konverter billedet til en tensor med `torchvision.transforms.functional.to_tensor`. Konverter billedet til en NumPy-array med `torchvision.transforms.functional.to_pil_image`. Konverter billedet til en tensor med `torchvision.transforms.functional.to_tensor`.
+

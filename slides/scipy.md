@@ -17,3 +17,23 @@ import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
 ```
+
+Nu kan vi hente data fra scikit-learn. Vi bruger boston-huspriserne, som er et datasæt med 506 rækker og 13 kolonner. Vi bruger kun de første to kolonner, som er kriminalitet og andel af befolkningen, der er lavindkomst.
+
+```python
+boston = datasets.load_boston()
+X = boston.data[:, :2]
+y = boston.target
+```
+
+Vi kan nu visualisere data. Vi bruger matplotlib til at lave et scatterplot.
+
+```python
+plt.scatter(X[:, 0], X[:, 1], c=y)
+plt.xlabel('Kriminalitet')
+plt.ylabel('Lavindkomst')
+plt.show()
+```
+
+![scatterplot](https://raw.githubusercontent.com/henrist/intelligente-systemer/main/slides/scipy/scatterplot.png)
+
