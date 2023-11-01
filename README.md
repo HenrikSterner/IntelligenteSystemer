@@ -78,9 +78,9 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 9.2 |slides | [Deskriptiv statistik](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/deskriptiv.pdf) | |
 9.3 |slides | [Sandsynlighedsregning](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | |
 10 |PD:5(Linear regression..) | [Lineær regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/linearregression.md) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
-11 |PD:5(Decision Trees..) | Beslutningstræer og Randomiseret skove ||
+11 |PD:5(Decision Trees..) | [Beslutningstræer og Randomiseret skove](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/treesandforrest.md) ||
 12 |PD:5(Naive Bayes..)  | [Naiv Bayes-algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
-13-14 | | Logistisk regression |  |
+13-14 |ML2:10 | [Logistisk regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/logisticregression.md) |  |
 15 | | Perceptroner |  |
 16 | | Lineært Neurale netværk |  |
 17 | | Multilinære Neurale netværk |  |
