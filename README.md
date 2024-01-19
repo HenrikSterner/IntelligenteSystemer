@@ -74,7 +74,7 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 3 |PY:16,PD:2 | [Python III: Beregninger med Numpy](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/numpy.pdf)  |NP:1-20, NPe: frivillig |
 4 |PY:16,PD:4| [Python IV: Grafik med Matplotlib](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/slidesmatplotlib.pdf)  |MP2, ØP: 43-48(eksl. 47), evt. de 10 fra (MP) |
 5-6 |PD:5(kNN)  | [KNN-algoritmen (jupyter)](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/knn_jupyter.ipynb) | [Lego Projet](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/pilotprojektlego.md) // [KNN Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) |
-7 |slides | [Datavisualisering i streamlit](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/streamlit.pdf) | SP: 1-20 |
+7 |slides | [Datavisualisering i streamlit](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/streamlit.md) | SP: 1-20 |
 8 |PD:5(kmeans),slides | [K-means algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/kmeans.ipynb) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) |
 9.1 |slides | [Lineær algebra](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/algebra.pdf) | |
 9.2 |slides | [Deskriptiv statistik](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/deskriptiv.pdf) | |
