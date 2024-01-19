@@ -2,7 +2,11 @@
 
 ## Af Henrik Sterner
 
----
+
+## Målet med dette oplæg
+- Introducere ganske kort forskellige former for AI i spil
+- Give en introduktion til konkret brug af AI og maskinelæring i escape rooms vha. Unity
+- 
 
 ## Forskellige former for AI
 Vi kan i grove træk dele AI i spil op i følgende kategorier:
@@ -161,21 +165,79 @@ Vi opnår rigtig fin effekt ved at få vores boids til at følge nogle simple re
 - Vandretning: Boids orienterer sig mod flokkens centrering.
 
 ## Implementering af boids i Unity
-Vi kan implementere boids i Unity ved at bruge ML-Agents. ML-Agents har en indbygget boid-agent, der kan bruges til at simulere sværme eller flokke af objekter:
+Vi kan relativt let implementere boids i både 2d og 3d ved objekt-orienteret programmering. Se evt. mine slides.
 
-```csharp
-public class BoidAgent : Agent
-{
-    public override void AgentAction(float[] vectorAction, string textAction)
-    {
-        if (textAction == "Boid")
-        {
-            SetReward(1.0f);
-            Done();
-        }
-    }
-}
-```
+Vi kan implementere boids i Unity ved at bruge ML-Agents. ML-Agents har en indbygget boid-agent, der kan bruges til at simulere sværme eller flokke af objekter:
+[https://zombie-einstein.github.io/2020/09/26/rl_flock.html](https://zombie-einstein.github.io/2020/09/26/rl_flock.html)
+
+Se mere i de næste slides.
+
+## Hvad er ML-Agents?
+ML-Agents er en open-source Unity-plugin, der kan bruges til at lave AI i Unity. ML-Agents er udviklet af Unity Technologies, og er en del af Unitys Machine Learning-platform.
+
+ML-Agents er en forkortelse for "Machine Learning Agents". ML-Agents kan bruges til at lave AI-agenter, der kan lære at udføre forskellige opgaver.
+
+## Hvordan kommer jeg i gang med ML-Agents?
+Kort fortalt:
+- Start et nyt Unity-projekt
+- Importer ML-Agents-pakken ved at gå til Window -> Package Manager -> ML-Agents -> Install
+- Importer ML-Agents eksemplerne ved at gå til Window -> ML-Agents -> Import All Samples
+- Åben et af eksemplerne ved at gå til Window -> ML-Agents -> RollerBall
+- Kør eksemplet ved at trykke på play-knappen
+
+## Hvad er lærende AI
+Lærende AI er AI der lærer af sine handlinger. Det kan være alt fra at en fjende skyder på spilleren, til at en NPC siger noget til spilleren.
+
+Hvordan adskiller lærende AI sig fra planlæggende AI? Lærende AI er mere kompleks, og kan tage flere forskellige beslutninger. Planlæggende AI er mere simpel, og kan kun reagere på spillerens handlinger.
+
+## Hvordan kunne lærende AI bruges i escape rooms og spil
+Det kunne være:
+- En NPC der lærer at bevæge sig rundt i rummet
+- En NPC der bliver bedre til at svarer på spillerens spørgsmål
+- En mus som blir bedre til at løse en labyrint
+- Genkende mønstre i spillerens adfærd og reagere på dem
+- Genkende billeder
+
+## Hvordan kan lærende AI implementeres
+Lærende AI kan implementeres ved brug af klassisk maskinelæring, eller ved brug af deep learning.
+
+## Hvad er klassisk maskinelæring
+Klassisk maskinelæring er en form for maskinelæring, der bruger en række foruddefinerede algoritmer til at løse et problem. Klassisk maskinelæring bruger ikke deep learning. Eksempler på algoritmer:
+
+- **K-Nearest Neighbors** - En algoritme der bruges til at klassificere data
+- **K-Means** - En algoritme der bruges til at gruppere data
+- **Decision Trees** - En algoritme der bruges til at klassificere data
+- **Random Forest** - En algoritme der bruges til at klassificere data
+- **Naive Bayes** - En algoritme der bruges til at klassificere data
+
+Algoritmerne kan også kombineres for at skabe mere komplekse AI'er.
+Se [https://henriksterner.github.io/IntelligenteSystemer/](https://henriksterner.github.io/IntelligenteSystemer/) for MEGET mere info om de konkrete algoritmer.
+
+## Inspiration: Anvendelse af K-Nearest Neighbors i escape rooms
+
+K-Nearest Neighbors er en algoritme der bruges til at klassificere data. Den kan bruges til at genkende mønstre i spillerens adfærd, og reagere på dem:
+
+- Samle data om spillerens adfærd og klassificere spillere som "nybegynder", "middel" eller "ekspert"
+- Reagere på spillerens adfærd baseret på deres klassifikation
+- Reagere på spillerens adfærd baseret på deres klassifikation, og give dem et hint hvis de har brug for det
+- Klassificere NPC'er som "ven" eller "fjende" baseret på spillerens adfærd
+  
+## Inspiration: Anvendelse af K-Means i escape rooms
+
+K-Means er en algoritme der bruges til at gruppere data. Den kan bruges til at genkende mønstre i spillerens adfærd, og reagere på dem:
+
+- Samle data om spillerens adfærd og gruppere spillere i grupper baseret på deres adfærd
+- Klassificere spillere efter Bartle's spiller typer
+- Reagere på spillerens adfærd baseret på deres gruppe
+- Få en NPC til at reagere på spillerens adfærd baseret på deres gruppe
+- Segmentere et billede af noget i rummet, og reagere på det
+
+## Hvad er deep learning
+Deep learning er en form for maskinelæring, der bruger neurale netværk til at løse et problem. Deep learning bruger ikke klassisk maskinelæring. Eksempler på neurale netværk:
+
+
+
+
 
 
 
