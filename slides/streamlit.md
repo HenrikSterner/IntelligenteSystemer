@@ -354,6 +354,42 @@ except:
     pass
 ```
 
+# Forskellige diagrammer i Streamlit
+I det følgende vil vi se på et eksempel på en Streamlit applikation. Denne applikation viser forskellige diagrammer. Denne applikation kan bruges til at vise forskellige diagrammer.
+
+```python
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+st.title("Forskellige diagrammer")
+st.markdown("## Indtast et diagramnavn")
+diagram = st.text_input("Diagramnavn")
+x = np.linspace(-10, 10, 100)
+try:
+    y = eval(diagram)
+    plt.plot(x, y)
+    st.pyplot()
+except:
+    pass
+```
+
+# Forskellige kort i Streamlit
+I det følgende vil vi se på et eksempel på en Streamlit applikation. Denne applikation viser forskellige kort. Denne applikation kan bruges til at vise forskellige kort.
+
+```python
+import streamlit as st
+import folium
+st.title("Forskellige kort")
+st.markdown("## Indtast et kortnavn")
+kort = st.text_input("Kortnavn")
+try:
+    m = eval(kort)
+    st.map(m)
+except:
+    pass
+```
+folium er et bibliotek til at lave kort. Du kan læse mere om folium her: https://python-visualization.github.io/folium/
+
 
 # Publicere streamlit app på nettet med Heroku I
 Hvis du vil publicere din streamlit app på nettet kan du bruge Heroku. For at bruge Heroku skal du først oprette en konto på Heroku. Derefter kan du publicere din app ved at køre følgende kommando i en terminal:
