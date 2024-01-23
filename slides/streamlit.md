@@ -12,6 +12,13 @@ Til dette formål findes der mange forskellige værktøjer. I denne workshop vil
 - Ved brug af Visual Studio Code kan de konverteres til HTML, PDF, PowerPoint, Word, LaTeX og mange andre formater 
 - Slides er tilgængelige på github.com/henriksterner/IntelligenteSystemer/slides
 
+# Hvorfor datavisualisering?
+- Datavisualisering er en vigtig del af data science og maskinelæring
+- Det er vigtigt at kunne visualisere data for at kunne forstå dem
+- Det er vigtigt at kunne visualisere data for at kunne kommunikere til andre hvad dataene viser
+- Der findes mange forskellige værktøjer til datavisualisering
+- I nærværende dokument vil vi kigge på et af dem: Streamlit
+
 # Hvad er Streamlit?
 Streamlit er et værktøj til at lave interaktive webapplikationer til visualisering af data. Det er et open source projekt, der er udviklet af et startup i Silicon Valley. Streamlit er skrevet i Python og er derfor nemt at bruge sammen med andre Python-baserede værktøjer til data science og maskinelæring.
 
@@ -35,6 +42,9 @@ For at teste om Streamlit er installeret korrekt kan du køre følgende kommando
 streamlit hello
 ```
 Dette vil starte en lokal webserver og åbne en browser med en simpel Streamlit applikation. Hvis det virker er Streamlit installeret korrekt.
+
+# Eksempler på Streamlit applikationer
+Streamlit har en lang række eksempler på applikationer på deres hjemmeside: https://www.streamlit.io/gallery. Du kan også finde mange eksempler på applikationer på nettet.
 
 # Første Streamlit applikation
 For at lave en Streamlit applikation skal du oprette en Python fil med følgende indhold:
