@@ -85,7 +85,7 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 11 |PD:5(Decision Trees..) | [Beslutningstræer og Randomiseret skove](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/treesandforrest.md) ||
 12 |PD:5(Naive Bayes..)  | [Naiv Bayes-algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
 13-14 |ML2:10 | [Logistisk regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/logisticregression.md) |  |
-15 | | Perceptroner |  |
+15 | | [Perceptroner](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/perceptron.ipynb) |  |
 16 | | Lineært Neurale netværk |  |
 17 | | Multilinære Neurale netværk |  |
 18 | | Neurale netværk |  |
