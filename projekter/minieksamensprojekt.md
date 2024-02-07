@@ -25,6 +25,7 @@ Overordnet kan I vælge mellem to typer af produkter (såfremt I ønsker at lave
    * En applikation der gør brug af naive bayes formel til at klassificere tekst eller billeder. Se hjemmesiden for meget mere info om naive bayes.
    * En applikation der gør brug af en eller flere af de nævnte algoritmer til at løse et problem I selv finder på.
 3) En Unity-applikation, der gør brug af en eller flere maskinelæringsmodeller. Det kan eksempelvis være at bruge ML-agents til at lave et spil, hvor en eller flere agenter skal lære at spille spillet. I kan også lave et spil, hvor en eller flere agenter skal lære at spille spillet. Der findes en masse dokumentation og tutorials til ML-agents på nettet. Kig eksempelvis på: https://unity.com/products/machine-learning-agents
+4) Webscraping af en side hvor I henter data ned og laver en eller flere maskinelæringsmodeller, der kan bruges til at forudsige noget. Eksempelvis kan I lave en webscraping af en side, der indeholder en masse boligpriser og lave en maskinelæringsmodel, der kan forudsige prisen på en bolig ud fra en række parametre.
 
 
 
