@@ -80,11 +80,12 @@ Modul Nr       | Kapitel     | Indhold                     | Øvelser     |
 9.1 |slides | [Lineær algebra](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/algebra.pdf) | |
 9.2 |slides | [Deskriptiv statistik](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/deskriptiv.pdf) | |
 9.3 |slides | [Sandsynlighedsregning](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | |
-10 |PD:5(Linear regression..) | [Lineær regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/linearregression.md) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
+10.1 |PD:5(Linear regression..) | [Lineær regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/linearregression.md) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
+10.2 |PD:5(Linear regression..) | [Polynomiel regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/polynomielregression.md) |[Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md)|
 11 |PD:5(Decision Trees..) | [Beslutningstræer og Randomiseret skove](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/treesandforrest.md) ||
 12 |PD:5(Naive Bayes..)  | [Naiv Bayes-algoritmen](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) |
 13-14 |ML2:10 | [Logistisk regression](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/sandsynlighedsteori.pdf) | [Projekt](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/logisticregression.md) |  |
-15 | | Perceptroner |  |
+15 | | [Perceptroner](https://github.com/HenrikSterner/IntelligenteSystemer/blob/main/slides/perceptron.ipynb) |  |
 16 | | Lineært Neurale netværk |  |
 17 | | Multilinære Neurale netværk |  |
 18 | | Neurale netværk |  |

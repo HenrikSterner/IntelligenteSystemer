@@ -2,7 +2,8 @@
 
 
 ## Introduktion
-Følgende opgave er et forslag til et mini eksamensprojekt for DDU2-holdet. I er dog meget velkomne til at samarbejde på tværs af holdene og I er også meget velkomne til at lave det projekt, som DDU1-holdet skal arbejde med. 
+Følgende opgave er et forslag til et mini-eksamensprojekt for DDU2-holdet. I er dog meget velkomne til at samarbejde på tværs af holdene og I er også meget velkomne til at lave det projekt, som DDU1-holdet skal arbejde med. Se den alternative opgave, som DDU1 får i Lecio.
+
 I skal i de næste uger lave et mini-eksamensprojekt – der vil især være fokus på at I skal lave et (simpelt) produkt og kunne formidle processen og den røde tråd i en skriftlig aflevering. Gruppestørrelse: I skal minimum være 2 og højst 4 i gruppen 
 
 
@@ -24,6 +25,7 @@ Overordnet kan I vælge mellem to typer af produkter (såfremt I ønsker at lave
    * En applikation der gør brug af naive bayes formel til at klassificere tekst eller billeder. Se hjemmesiden for meget mere info om naive bayes.
    * En applikation der gør brug af en eller flere af de nævnte algoritmer til at løse et problem I selv finder på.
 3) En Unity-applikation, der gør brug af en eller flere maskinelæringsmodeller. Det kan eksempelvis være at bruge ML-agents til at lave et spil, hvor en eller flere agenter skal lære at spille spillet. I kan også lave et spil, hvor en eller flere agenter skal lære at spille spillet. Der findes en masse dokumentation og tutorials til ML-agents på nettet. Kig eksempelvis på: https://unity.com/products/machine-learning-agents
+4) Webscraping af en side hvor I henter data ned og laver en eller flere maskinelæringsmodeller, der kan bruges til at forudsige noget. Eksempelvis kan I lave en webscraping af en side, der indeholder en masse boligpriser og lave en maskinelæringsmodel, der kan forudsige prisen på en bolig ud fra en række parametre.
 
 
 
