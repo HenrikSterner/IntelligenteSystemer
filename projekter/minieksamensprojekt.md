@@ -2,7 +2,8 @@
 
 
 ## Introduktion
-Følgende opgave er et forslag til et mini eksamensprojekt for DDU2-holdet. I er dog meget velkomne til at samarbejde på tværs af holdene og I er også meget velkomne til at lave det projekt, som DDU1-holdet skal arbejde med. 
+Følgende opgave er et forslag til et mini-eksamensprojekt for DDU2-holdet. I er dog meget velkomne til at samarbejde på tværs af holdene og I er også meget velkomne til at lave det projekt, som DDU1-holdet skal arbejde med. Se den alternative opgave, som DDU1 får i Lecio.
+
 I skal i de næste uger lave et mini-eksamensprojekt – der vil især være fokus på at I skal lave et (simpelt) produkt og kunne formidle processen og den røde tråd i en skriftlig aflevering. Gruppestørrelse: I skal minimum være 2 og højst 4 i gruppen 
 
 
