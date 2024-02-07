@@ -319,9 +319,147 @@ Polynomiel regression går ud på at finde en polynomiefunktion $f(x)$, således
 # Minimalisering af fejl
 Polynomiel regression går ud på at finde en polynomiefunktion $f(x)$, således at $f(p_i) \approx v_i$ for alle $i$.
 
-Mere konkret vil vi finde en polynomielfunktion $f(x)$, således at:
+Mere konkret vil vi finde en polynomiel funktion $f(x)$, således at følgende udtryk minimaliseres:
 
 $$E= \sum_{i=1}^{n} (f(p_i) - v_i)^2$$
+
+# Konkret eksempel
+Betragt funktionen 
+$$f(x;y)=a_1 x^2 + a_2 y^2 + a_3 xy + a_4 x - a_5 y + a_6$$
+
+Målet er at finde $a_1, a_2, a_3, a_4, a_5, a_6$, således at $f(p_i) \approx v_i$ for alle $i$: 
+
+$$E=\sum_{i=1}^{n} (f(p_i) - v_i)^2$$
+Indsættes $f(x;y)$ i $E$ fås:
+
+$$E=\sum_{i=1}^{n} (a_1 x_i^2 + a_2 y_i^2 + a_3 x_i y_i + a_4 x_i - a_5 y_i + a_6 - v_i)^2$$
+
+# Konkret eksempel fortsat
+For hvert punkt $p_i$ har vi en ligning:
+
+$$a_1 x_i^2 + a_2 y_i^2 + a_3 x_i y_i + a_4 x_i - a_5 y_i + a_6 = v_1  $$
+$$a_1 x_i^2 + a_2 y_i^2 + a_3 x_i y_i + a_4 x_i - a_5 y_i + a_6 = v_2   $$
+$$\vdots$$
+$$a_1 x_i^2 + a_2 y_i^2 + a_3 x_i y_i + a_4 x_i - a_5 y_i + a_6 = v_n  $$
+
+# Konkret eksempel fortsat
+Dette kan skrives som et matrix-vektor produkt:
+
+$$\begin{bmatrix} x_1^2 & y_1^2 & x_1 y_1 & x_1 & -y_1 & 1 \\ x_2^2 & y_2^2 & x_2 y_2 & x_2 & -y_2 & 1 \\ \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\ x_n^2 & y_n^2 & x_n y_n & x_n & -y_n & 1 \end{bmatrix} \begin{bmatrix} a_1 \\ a_2 \\ a_3 \\ a_4 \\ a_5 \\ a_6 \end{bmatrix} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}$$
+
+Kaldes første matrix for $D$ og anden vektor for $a$, så er ligningen:
+
+$$D a = v$$
+
+# Konkret eksempel fortsat
+Vi har altså en ligning:
+
+$$D a = v$$
+Multiplicerer vi begge sider med $D^T$ fås:
+
+$$D^T D a = D^T v$$
+
+Antages, at $D^T D$ har fuld rank, så har $D^T D$ en invers. Vi kan derfor multiplicere begge sider med $(D^T D)^{-1}$:
+
+$$(D^T D)^{-1} D^T D a = (D^T D)^{-1} D^T v$$
+
+Vi har derfor:
+
+$$a = (D^T D)^{-1} D^T v$$
+
+# Konkret eksempel konklusion
+Sammenlignes med udgangspunktet $$D a = v$$ ses, at $a$ er givet ved:
+
+$$a = (D^T D)^{-1} D^T v$$
+
+Dette er en generel formel for polynomiel regression.
+
+
+# Overfitting
+Polynomiel regression kan være følsom over for overfitting. Overfitting opstår, når modellen passer for godt til data. Dvs. modellen passer for godt til træningsdata
+
+Overfitting kan undgås ved at bruge en lavere grad af polynomium. 
+
+Vi kan også bruge en metode kaldet regularisering til at undgå overfitting. Regularisering går ud på at tilføje en straf til fejludtrykket, således at modellen ikke passer for godt til data.
+
+# Underfitting
+Polynomiel regression kan også være følsom over for underfitting. Underfitting opstår, når modellen passer for dårligt til data. Dvs. modellen passer for dårligt til træningsdata.
+
+Underfitting kan undgås ved at bruge en højere grad af polynomium.
+
+
+# Hvordan kan vi undgå overfitting og underfitting?
+Overfitting og underfitting kan undgås ved at bruge en metode kaldet krydsvalidering. Krydsvalidering går ud på at opdele datasættet i træningsdata og testdata. Modellen trænes på træningsdata og evalueres på testdata.
+
+Krydsvalidering kan også bruges til at finde den optimale grad af polynomium.
+
+# Eksempel på krydsvalidering
+Antag vi har et datasæt med 100 punkter. Vi opdeler datasættet i 80 træningspunkter og 20 testpunkter. Modellen trænes på træningspunkterne og evalueres på testpunkterne.
+
+Vi kan nu gentage processen 5 gange, således at vi har 5 forskellige modeller. Vi kan nu beregne gennemsnittet af fejlene for de 5 modeller.
+
+# Hvordan kan vi implementere krydsvalidering i Python?
+Krydsvalidering kan implementeres i Python ved brug af biblioteket scikit-learn. Scikit-learn har en metode kaldet cross_val_score, der kan bruges til at implementere krydsvalidering.
+
+# Eksempel på krydsvalidering i Python med scikit-learn
+
+Først importeres scikit-learn:
+
+```python
+import numpy as np
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+```
+
+# Eksempel på krydsvalidering i Python med scikit-learn
+
+Dernæst defineres datasættet:
+
+```python
+x = np.random.rand(100, 1)
+y = np.random.rand(100, 1)
+```
+
+# Eksempel på krydsvalidering i Python med scikit-learn
+
+Herefter opdeles datasættet i træningsdata og testdata:
+
+```python
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+```
+
+Her har vi valgt, at 20% af datasættet skal bruges til testdata.
+
+# Eksempel på krydsvalidering i Python med scikit-learn
+
+Herefter trænes modellen på træningsdata:
+
+```python
+model = polyfit(x_train, y_train, 2)
+```
+
+# Eksempel på krydsvalidering i Python med scikit-learn
+
+Herefter evalueres modellen på testdata:
+
+```python  
+scores = cross_val_score(model, x_test, y_test, cv=5)
+```
+
+Her har vi valgt, at datasættet skal opdeles i 5 dele.
+
+Vi kan nu beregne gennemsnittet af fejlene for de 5 modeller: 
+    
+```python
+print(scores.mean())
+```
+
+
+
+
+
+
 
 
 
