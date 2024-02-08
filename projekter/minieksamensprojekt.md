@@ -2,13 +2,14 @@
 
 
 ## Introduktion
-Følgende opgave er et forslag til et mini-eksamensprojekt for DDU2-holdet. I er dog meget velkomne til at samarbejde på tværs af holdene og I er også meget velkomne til at lave det projekt, som DDU1-holdet skal arbejde med. Se den alternative opgave, som DDU1 får i Lecio.
+Følgende opgave er et forslag til et mini-eksamensprojekt for DDU2-holdet. I er dog meget velkomne til at samarbejde på tværs af holdene og I er også meget velkomne til at lave det projekt, som DDU1-holdet skal arbejde med. Se den alternative opgave, som DDU1 får i Lectio.
 
 I skal i de næste uger lave et mini-eksamensprojekt – der vil især være fokus på at I skal lave et (simpelt) produkt og kunne formidle processen og den røde tråd i en skriftlig aflevering. Gruppestørrelse: I skal minimum være 2 og højst 4 i gruppen 
 
 
 ## Dokumentation
 Den skriftlige dokumentation: 
+
 * Skal være i form af en “skabelon” af en opgave, hvori I meget kort beskriver hvad der skal være i de enkelte afsnit og hvor I viser den røde tråd. Derudover skal der være skitser af produktet, der er lavet i forhold til både low og high fidelity. 
 * Det vigtige er, at I kan vise og dokumentere den røde tråd, i den skriftlige formidling. Hvornår skal hvad komme? Hvor lange skal afsnittene være? Hvad skal de bruges til? Hvordan hænger afsnittene sammen? Hvordan vil I formidle de enkelte afsnit? Hvilke teorier og metoder vil det være relevant at inddrage i de enkelte afsnit? Hvordan skal der laves litteraturhenvisninger og en samlet litteraturliste? Osv. 
 
@@ -16,8 +17,7 @@ Den skriftlige dokumentation:
 I skal som nævnt udforme et simpelt it-produkt der gør brug af kunstig intelligens. 
 Overordnet kan I vælge mellem to typer af produkter (såfremt I ønsker at lave et tredje produkt, så er I meget velkomne til det - men kom lige og snak om det først):
 
-1) En streamlit-applikation, der kan bruges til at visualisere et datasæt. Visualisering af store datasæt er særdeles vigtige, da man ofte får mulighed for at se data fra en anden vinkel. Eksempler på sådanne applikationer kan ses her: https://www.streamlit.io/gallery. Streamlit har en lang række af forskellige moduler, der kan bruges til at visualisere data: 
-
+1) En streamlit-applikation, der kan bruges til at visualisere et datasæt. Visualisering af store datasæt er særdeles vigtige, da man ofte får mulighed for at se data fra en anden vinkel. Eksempler på sådanne applikationer kan ses her: https://www.streamlit.io/gallery. Streamlit har en lang række af forskellige moduler, der kan bruges til at visualisere data: https://docs.streamlit.io/en/stable/api.html. I kan også lave en applikation, der gør brug af en/flere maskinelæringsmodeller (I kan læse meget mere om de nævnte algortimer på fagets hjemmeside: https://henriksterner.github.io/IntelligenteSystemer/).
 2) En streamlit-applikation, der gør brug af en/flere maskinelæringsmodeller (I kan læse meget mere om de nævnte algortimer på fagets hjemmeside: https://henriksterner.github.io/IntelligenteSystemer/):
    * En applikation der gør brug af KNN eller K-means. Eksempelvis til at lave et simpel anbefalingssystem.
    * En applikation der gør brug af en eller flere neurale netværk. Eksempelvis til klassificere billeder eller tekst.
